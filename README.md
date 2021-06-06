@@ -5,8 +5,8 @@
 
 ## Build Commands
 
-npm install
-npm install react-scripts --save
+- `npm install`
+- `npm install react-scripts --save`
 
 ## How to edit infografic
 
