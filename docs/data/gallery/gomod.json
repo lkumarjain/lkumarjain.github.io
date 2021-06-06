@@ -1,0 +1,73 @@
+{
+    "Title": "Go Module",
+    "Subtitle": "Package Management System in GO",
+    "Image": "/img/logo/golang.png",
+    "Footer": "https://lkumarjain.blogspot.com/",
+    "Color": "Red",
+    "ItemColor": "Purple",
+    "Items": [
+        {
+            "Column": 6,
+            "Title": "Module Aware Commands",
+            "Subtitle": "build, doc, fix, fmt, generate, install, list, run, test, vet",
+            "Description": "Module commands outside a module - Module aware commands normally run in the context of a main module defined by a go.mod file in the working directory or a parent directory. Some commands may be run in module-aware mode without a go.mod file.",
+            "Image": "/img/gomod/go-build.png"
+        },
+        {
+            "Column": 6,
+            "Title": "Module Command",
+            "Subtitle": "go mod",
+            "Description": "Provides access to operations on the modules listed in the go.mod file.",
+            "Image": "/img/gomod/go-mod.png"
+        },
+        {
+            "Column": 6,
+            "Title": "Initialize Module",
+            "Subtitle": "go mod init, go mod init [path]",
+            "Description": "The go mod init command initializes and writes a new go.mod file in the current directory, in effect creating a new module rooted at the current directory. The go.mod file must not already exist.",
+            "Image": "/img/gomod/go-mod-init.png"
+        },
+        {
+            "Column": 6,
+            "Title": "Vendoring Packages",
+            "Subtitle": "go mod vendor [-e] [-v]",
+            "Description": "The go mod vendor command constructs a directory named vendor in the main module's root directory that contains copies of all packages needed to support builds and tests of packages in the main module.",
+            "Image": "/img/gomod/go-mod-vendor.png"
+        },
+        {
+            "Column": 4,
+            "Title": "Download & Clean Packages",
+            "Subtitle": "go mod download, go clean -modcache",
+            "Description": "The -modcache flag causes go clean to remove the entire module cache, including unpacked source code of versioned dependencies.",
+            "Image": "/img/gomod/go-mod-download-clean.png"
+        },
+        {
+            "Column": 4,
+            "Title": "Package Verification",
+            "Subtitle": "go mod verify",
+            "Description": "go mod verify checks that dependencies of the main module stored in the module cache have not been modified since they were downloaded.",
+            "Image": "/img/gomod/go-mod-verify.png"
+        },
+        {
+            "Column": 4,
+            "Title": "Why Package Required",
+            "Subtitle": "go mod why [-m] [-vendor] packages...",
+            "Description": "go mod why shows a shortest path in the import graph from the main module to each of the listed packages.",
+            "Image": "/img/gomod/go-mod-why.png"
+        },
+        {
+            "Column": 6,
+            "Title": "Package Graph",
+            "Subtitle": "go mod graph",
+            "Description": "The go mod graph command prints the module requirement graph (with replacements applied) in text form.",
+            "Image": "/img/gomod/go-mod-graph.png"
+        },
+        {
+            "Column": 6,
+            "Title": "Package Management",
+            "Subtitle": "go mod tidy [-e] [-v]",
+            "Description": "go mod tidy ensures that the go.mod file matches the source code in the module. It adds any missing module requirements necessary to build the current module's packages and dependencies, and it removes requirements on modules that don't provide any relevant packages. It also adds any missing entries to go.sum and removes unnecessary entries.",
+            "Image": "/img/gomod/go-mod-tidy.png"
+        }
+    ]
+}

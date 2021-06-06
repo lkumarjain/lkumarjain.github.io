@@ -1,0 +1,33 @@
+{
+    "Home": "/data/infographics/kafkabasics.json",
+    "Navigations": [
+        {
+            "Name": "Infographics",
+            "Items": [
+                {
+                    "Type": "LINK",
+                    "Key": "kafka-basics-infographics",
+                    "URI": "/infographics/kafkabasics",
+                    "Name": "Apache Kafka"
+                },
+                {
+                    "Type": "LINK",
+                    "Key": "gomod-gallery",
+                    "URI": "/gallery/gomod",
+                    "Name": "Go Module"
+                }
+            ]
+        },
+        {
+            "Name": "Components",
+            "Items": [
+                {
+                    "Type": "LINK",
+                    "Key": "components",
+                    "URI": "/components",
+                    "Name": "Examples"
+                }
+            ]
+        }
+    ]
+}

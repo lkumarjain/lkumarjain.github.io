@@ -1,0 +1,50 @@
+@import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+.material-footer {
+    padding: 16px;
+    text-align: center;
+    color: var(--C900);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.material-footer.article {
+    margin-left: 16px;
+    background: var(--C100);
+}
+
+.material-footer.section {
+    border-radius: 0px 0px 20px 20px;
+    background: -webkit-linear-gradient(to bottom, var(--C100) 0%, var(--C100) 51%, var(--C200) 100%);
+    background: -moz-linear-gradient(to bottom, var(--C100) 0%, var(--C100) 51%, var(--C200) 100%);
+    background: linear-gradient(to bottom, var(--C100) 0%, var(--C100) 51%, var(--C200) 100%);
+}
+
+.material-footer.panel {
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+    margin-top: 10px;
+    color: var(--C500);
+    border-top: 2px solid var(--CA100);
+}
+
+.material-footer.align-center {
+    text-align: center;
+}
+
+.material-footer.align-left {
+    text-align: left;
+}
+
+.material-footer.align-right {
+    text-align: right;
+}
+
+.material-footer.align-justify {
+    text-align: justify;
+}

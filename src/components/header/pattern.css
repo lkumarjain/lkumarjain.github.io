@@ -1,0 +1,78 @@
+.material-header.isometric {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: linear-gradient(30deg, var(--C700) 12%, transparent 12.5%, transparent 87%, var(--C700) 87.5%, var(--C700)), linear-gradient(150deg, var(--C700) 12%, transparent 12.5%, transparent 87%, var(--C700) 87.5%, var(--C700)), linear-gradient(30deg, var(--C700) 12%, transparent 12.5%, transparent 87%, var(--C700) 87.5%, var(--C700)), linear-gradient(150deg, var(--C700) 12%, transparent 12.5%, transparent 87%, var(--C700) 87.5%, var(--C700)), linear-gradient(60deg, var(--C400) 25%, transparent 25.5%, transparent 75%, var(--C400) 75%, var(--C400)), linear-gradient(60deg, var(--C400) 25%, transparent 25.5%, transparent 75%, var(--C400) 75%, var(--C400));
+    background-size: 24px 42px;
+    background-position: 0 0, 0 0, 12px 21px, 12px 21px, 0 0, 12px 21px;
+}
+
+.material-header.paper {
+    color: var(--C50);
+    background-color: var(--C600);
+    background-image: linear-gradient(var(--C500) 1px, transparent 1px), linear-gradient(90deg, var(--C500) 1px, transparent 1px), linear-gradient(var(--C500) 1px, transparent 1px), linear-gradient(90deg, var(--C500) 1px, var(--C700) 1px);
+    background-size: 96px 96px, 96px 96px, 16px 16px, 16px 16px;
+    background-position: -1px -1px, -1px -1px;
+}
+
+.material-header.rectangles {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: repeating-linear-gradient(45deg, var(--C700) 25%, transparent 25%, transparent 75%, var(--C700) 75%, var(--C700)), repeating-linear-gradient(45deg, var(--C700) 25%, var(--C500) 25%, var(--C500) 75%, var(--C700) 75%, var(--C700));
+    background-position: 0 0, 11px 11px;
+    background-size: 22px 22px;
+}
+
+.material-header.rhombus {
+    color: var(--C50);
+    background-color: var(--C600);
+    background-image: linear-gradient(135deg, var(--C700) 25%, transparent 25%), linear-gradient(225deg, var(--C700) 25%, transparent 25%), linear-gradient(45deg, var(--C700) 25%, transparent 25%), linear-gradient(315deg, var(--C700) 25%, var(--C600) 75%);
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+.material-header.zigzag {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: linear-gradient(135deg, var(--C700) 25%, transparent 25%), linear-gradient(225deg, var(--C700) 25%, transparent 25%), linear-gradient(45deg, var(--C700) 25%, transparent 25%), linear-gradient(315deg, var(--C700) 25%, var(--C500) 50%);
+    background-position: 11px 0, 11px 0, 0 0, 0 0;
+    background-size: 22px 22px;
+    background-repeat: repeat;
+}
+
+.material-header.wave {
+    color: var(--C50);
+    background-color: var(--C600);
+    background-image: linear-gradient(30deg, var(--C600) 12%, transparent 12.5%, transparent 87%, var(--C600) 87.5%, var(--C600)), linear-gradient(150deg, var(--C600) 12%, transparent 12.5%, transparent 87%, var(--C600) 87.5%, var(--C600)), linear-gradient(30deg, var(--C600) 12%, transparent 12.5%, transparent 87%, var(--C600) 87.5%, var(--C600)), linear-gradient(150deg, var(--C600) 12%, transparent 12.5%, transparent 87%, var(--C600) 87.5%, var(--C600)), linear-gradient(60deg, var(--C500) 25%, transparent 25.5%, transparent 75%, var(--C500) 75%, var(--C500)), linear-gradient(60deg, var(--C500) 25%, transparent 25.5%, transparent 75%, var(--C500) 75%, var(--C500));
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
+}
+
+.material-header.diagonal-line {
+    color: var(--C50);
+    background-color: var(--C600);
+    background: repeating-linear-gradient( 45deg, var(--C700), var(--C700) 5.5px, var(--C600) 5.5px, var(--C600) 10px);
+}
+
+.material-header.triangle {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: linear-gradient(-45deg, var(--C500), var(--C500) 50%, var(--C700) 50%, var(--C700));
+    background-size: 11px 11px;
+}
+
+.material-header.moon {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: radial-gradient( ellipse farthest-corner at 11px 11px, var(--C700), var(--C700) 50%, var(--C500) 50%);
+    background-size: 11px 11px;
+}
+
+.material-header.dot-box {
+    color: var(--C50);
+    background-color: var(--C500);
+    background-image: radial-gradient(circle, var(--C700) 15%, transparent 10%), radial-gradient(circle, var(--C700) 15%, transparent 10%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}

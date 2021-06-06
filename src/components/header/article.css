@@ -1,0 +1,50 @@
+.material-header.article {
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 20px;
+    height: 74px;
+    color: var(--C50);
+    background: linear-gradient(to top, var(--C500) 0%, var(--C600) 51%, var(--C100) 100%);
+}
+
+.material-header.article:after {
+    left: 0px;
+    bottom: -16px;
+    width: 0px;
+    border: 8px solid;
+    border-top-color: var(--C900);
+    border-right-color: var(--C900);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.material-header.article:before {
+    left: 16px;
+    top: 100%;
+    bottom: -30px;
+    width: calc(100% - 16px);
+    background: linear-gradient(to bottom, var(--C50) 0%, var(--C100) 51%, var(--C100) 100%);
+}
+
+.material-header.article .action {
+    top: calc(100% - 32px);
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid var(--C50);
+    background: linear-gradient(to top, var(--C500) 0%, var(--C600) 51%, var(--C100) 100%);
+}
+
+.material-header.article .action:hover {
+    background: var(--C900);
+}
+
+.material-header.article .avatar-container {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: 0;
+    top: 12px;
+}

@@ -1,0 +1,37 @@
+.layout .popper-fab {
+    position: fixed;
+    top: 160px;
+    right: 0;
+    border-radius: 20% 1px 1px 20%;
+    z-index: 100; 
+    background-color: #EEEEEE;
+    opacity: .5;
+}
+
+.layout .popper-fab .icon {
+    block-size: 1em;
+    fill: #9f9f9f;
+    vertical-align: middle;
+}
+
+
+.layout .popper-page {
+    position: fixed;
+    top: 165px;
+    right: 60px;
+    padding: 0px;
+    background: #fafafa;
+    z-index: 20;
+    margin: 0px 0px 0px -10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-left: 10px solid #424242;
+    border-right: 10px solid #424242;
+    border-top: 10px solid #616161;
+    border-bottom: 10px solid #616161;
+}
+
+@media print {
+    .layout .popper-fab {
+        display: none;
+    }
+}
