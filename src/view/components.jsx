@@ -2,9 +2,18 @@ import { Card, CardContent, Grid, Typography } from "@material-ui/core";
 import { Image } from "../components";
 import NavigationExample from "./examples/navigationExample";
 import PanelExample from "./examples/panelExample";
+import PaperExample from "./examples/paperExample";
 
 export default function Components(props) {
     return <Grid container spacing={2}>
+        <Grid item xs={12}>
+            <Card>
+                <CardContent>
+                    <Typography color="textSecondary" gutterBottom>Paper Component</Typography>
+                    <PaperExample />
+                </CardContent>
+            </Card>
+        </Grid>
         <Grid item xs={12}>
             <Card>
                 <CardContent>

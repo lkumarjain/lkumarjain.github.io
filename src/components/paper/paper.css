@@ -1,0 +1,172 @@
+.jn-paper {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    border-radius: 50% 50% 5px 5px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    background: var(--C50);
+    color: var(--C800);
+}
+
+.jn-paper-header {
+    text-align: center;
+    display: block;
+    padding: 15px;
+    height: 55px;
+    margin: 0px 0px 40px 0px;
+    position: relative;
+    border-radius: 50% 50% 0px 0px;
+    background: var(--C100);
+    border-bottom: 10px solid var(--CA100);
+}
+
+.jn-paper-header .title {
+    font-size: 30px;
+    font-weight: 700;
+    font-variant: small-caps;
+    overflow: hidden;
+}
+
+.jn-paper-header .subtitle {
+    font-size: 16px;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    color: var(--C500);
+}
+
+.jn-paper-header .avatar {
+    --ah: 75px;
+    display: block;
+    position: absolute;
+    height: var(--ah);
+    width: var(--ah);
+    line-height: var(--ah);
+    margin: auto;
+    z-index: 1;
+    top: 45px;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 100%;
+    border: 5px solid var(--C50);
+    background: var(--C100);
+}
+
+.jn-paper-header .avatar:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 5%;
+    opacity: 0.6;
+    height: 100%;
+    width: 90%;
+    filter: blur(5px);
+    z-index: 2;
+}
+
+.jn-paper-header .avatar:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    filter: blur(10px);
+}
+
+.jn-paper-header .action {
+    --ach: 75px;
+    display: block;
+    position: absolute;
+    height: var(--ach);
+    width: var(--ach);
+    line-height: var(--ach);
+    margin: auto;
+    z-index: 1;
+    top: 45px;
+    right: 16px;
+    border-radius: 100%;
+    border: 5px solid var(--C50);
+    background: var(--C100);
+}
+
+.jn-paper-header .action:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 5%;
+    opacity: 0.6;
+    height: 100%;
+    width: 90%;
+    filter: blur(5px);
+    z-index: 2;
+}
+
+.jn-paper-header .action:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    filter: blur(10px);
+}
+
+.jn-paper-header .action:hover {
+    background: -webkit-linear-gradient(to top, var(--C100) 0%, var(--C100) 51%, var(--C200) 100%);
+    background: -moz-linear-gradient(to top, var(--C100) 0%, var(--C100) 51%, var(--C200) 100%);
+    background: linear-gradient(to top, var(--C100) 0%, var(--C200) 31%, var(--C200) 51%, var(--C50) 100%);
+}
+
+.jn-paper-content {
+    padding: 60px 16px 16px 16px;
+    margin: -45px 0px 0px 0px;
+    background: var(--C50);
+    border-bottom: 10px solid var(--CA100);
+}
+
+.jn-paper-footer {
+    text-align: center;
+    display: block;
+    padding: 15px;
+    border-radius: 0px 0px 5px 5px;
+    background: var(--C100);
+}
+
+@media screen and (max-width: 767px) {
+    .jn-paper-header {
+        margin: 0px;
+    }
+    .jn-paper-header .title {
+        font-size: 20px;
+    }
+    .jn-paper-header .subtitle {
+        font-size: 14px;
+    }
+    .jn-paper-header .avatar {
+        display: none;
+    }
+    .jn-paper-header .action {
+        display: none;
+    }
+    .jn-paper-section {
+        padding: 16px;
+        margin: 0px;
+    }
+}
+
+@import url('./section.css');

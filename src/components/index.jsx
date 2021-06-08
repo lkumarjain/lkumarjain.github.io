@@ -5,6 +5,7 @@ import Header from './header';
 import Image from './image';
 import { Navigation, NavigationItem, NavigationLink } from './navigation';
 import Oops from './oops'
+import Paper from './paper'
 
 export {
     Article,
@@ -16,4 +17,5 @@ export {
     NavigationItem,
     NavigationLink,
     Oops,
+    Paper,
 }

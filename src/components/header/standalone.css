@@ -1,9 +1,8 @@
 .material-header.standalone {
     padding: 5px;
     height: 74px;
-    border-radius: 30px;
+    border-radius: 5px 50%;
     border: 10px solid transparent;
-    transform: skew(-25deg);
     width: calc(100% - 50px);
     margin: auto;
     color: var(--C50);

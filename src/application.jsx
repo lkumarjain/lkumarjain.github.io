@@ -6,6 +6,7 @@ import Components from './view/components';
 import Home from './view/home';
 import { Infographic } from './view/infographic';
 import { Gallery } from './view/gallery';
+import Playground from './view/playground';
 
 export default function Application(props) {
     const [config, setConfig] = React.useState([]);
@@ -52,6 +53,7 @@ function RouteGenerator(props) {
     return <Switch>
         <Route exact path="/" children={<Home config={config} />} />
         <Route exact path="/components" children={<Components />} />
+        <Route exact path="/playground" children={<Playground />} />
         <Route exact path="/gallery/:key" children={<GalleryHandler />} />
         <Route path="/infographics/:key" children={<InfographicHandler />} />
     </Switch>;
