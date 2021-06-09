@@ -6,6 +6,8 @@ import Image from './image';
 import { Navigation, NavigationItem, NavigationLink } from './navigation';
 import Oops from './oops'
 import Paper from './paper'
+import Timeline from './timeline/timeline'
+import TimelineItem from './timeline/timelineItem'
 
 export {
     Article,
@@ -18,4 +20,6 @@ export {
     NavigationLink,
     Oops,
     Paper,
+    Timeline,
+    TimelineItem,
 }

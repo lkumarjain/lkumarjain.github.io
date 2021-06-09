@@ -3,9 +3,18 @@ import { Image } from "../components";
 import NavigationExample from "./examples/navigationExample";
 import PanelExample from "./examples/panelExample";
 import PaperExample from "./examples/paperExample";
+import TimelineExample from "./examples/timelineExample";
 
 export default function Components(props) {
     return <Grid container spacing={2}>
+        <Grid item xs={12}>
+            <Card>
+                <CardContent>
+                    <Typography color="textSecondary" gutterBottom>Timeline Component</Typography>
+                    <TimelineExample />
+                </CardContent>
+            </Card>
+        </Grid>
         <Grid item xs={12}>
             <Card>
                 <CardContent>
