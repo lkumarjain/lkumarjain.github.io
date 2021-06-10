@@ -1,0 +1,296 @@
+@media (min-width: 1200px) {
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item {
+        margin: 1rem;
+        float: left;
+        min-height: var(--height);
+    }
+    /* --------- layout-4321 Start ----------- */
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item {
+        width: calc(25% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+5),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+6),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+7),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+8) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+1)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+2)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+1)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+2)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+3)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+5)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+6)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+7)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+5)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+6)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(8n+7)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+    /* --------- layout-3321 / layout-3221 Start ----------- */
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item {
+        width: calc(33.33% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+6),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+4),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+5),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+6) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+1)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+2)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+1)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+2)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+1)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+2)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+1)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+2)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+4)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+5)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+4)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(6n+5)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+    /* --------- layout-2221'/ 'layout-2211' / 'layout-2111 Start ----------- */
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item {
+        width: calc(50% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+4) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+1)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+1)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-2111 .jn-timeline-item:nth-child(4n+3)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item {
+        margin: 1rem;
+        float: left;
+        min-height: var(--height);
+    }
+    /* --------- layout-4321 / layout-3321 Start ----------- */
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item {
+        width: calc(33.33% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+4),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+5),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+6),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+6) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+1)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+2)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+1)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+2)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+1)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+2)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+1)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+2)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+4)::before,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+5)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+4)::after,
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(6n+5)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+4)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(6n+5)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+    /* --------- layout-3221 / layout-2221'/ 'layout-2211' Start ----------- */
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item {
+        width: calc(50% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+4) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+1)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+1)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-2211 .jn-timeline-item:nth-child(4n+3)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 899px) {
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item {
+        margin: 1rem;
+        float: left;
+        min-height: var(--height);
+    }
+    /* --------- layout-3221 / layout-2221'/ 'layout-2211' Start ----------- */
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item {
+        width: calc(50% - 4rem);
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+4),
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3),
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+4) {
+        float: right;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+1)::before,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+1)::after,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+1)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3)::before,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .jn-timeline-items.infographic.layout-4321 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-3321 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-3221 .jn-timeline-item:nth-child(4n+3)::after,
+    .jn-timeline-items.infographic.layout-2221 .jn-timeline-item:nth-child(4n+3)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}

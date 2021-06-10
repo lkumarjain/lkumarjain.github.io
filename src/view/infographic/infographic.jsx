@@ -1,88 +1,75 @@
 import React from "react";
-import { Grid, IconButton, MenuList, Popover } from "@material-ui/core";
+import { Image, Paper, Timeline, TimelineItem } from "../../components";
+import { IconButton, MenuList, Popover } from "@material-ui/core";
 import { SettingsSharp } from "@material-ui/icons";
-import { Article, Header, Footer } from "../../components";
+import InfographicForm from './infographicForm';
 
-import persistance from "../../services/persistance";
-import commonService from "../../services/common";
+import CommonService from "../../services/common";
+import Persistance from "../../services/persistance";
 import infographicService from "../../services/infographic";
 
-import InfographicForm from "./infographicForm";
-
 const sourceKey = "InfographicSource";
-const recordKey = "InfographicRecord"
-
+const recordKey = "InfographicRecord";
+const vPaper = "paper";
+const vArticle = "article";
+const vSection = "section";
 
 export default function Infographic(props) {
-    const { path, hasAction } = props;
+    const { path = "/data/infographics/kafka.json", hasAction = true } = props;
 
-    const [record, setRecord] = React.useState(persistance.Read(recordKey, {}));
-    const source = persistance.Read(sourceKey, "");
+    const [record, setRecord] = React.useState(Persistance.Read(recordKey, {}));
+    const source = Persistance.Read(sourceKey, "");
     if (source !== path) {
         console.log("Reading from path :: ", path)
         fetch(path)
             .then(response => response.json())
-            .then(result => {
-                persistance.Write(sourceKey, path);
-                persistance.Write(recordKey, commonService.Stringify(result));
-                setRecord(result);
+            .then(article => {
+                Persistance.Write(sourceKey, path);
+                Persistance.Write(recordKey, CommonService.Stringify(article));
+                setRecord(article);
             });
 
         return ""
     }
 
-    function handleSaveInfographic(value) {
-        value = infographicService.AddOrReplace(record, value)
-        persistance.Write(recordKey, commonService.Stringify(value));
-        setRecord(value);
+    function handleSaveInfographic(value, parent) {
+        value = infographicService.AddOrReplace(record, value, parent)
+        Persistance.Write(recordKey, CommonService.Stringify(value));
+        setRecord({ ...value });
     }
 
-    return <InfographicArticle hasAction={hasAction} variant="section" record={record} onSave={handleSaveInfographic} >
+    return <Paper color={record.Color} style={record.Style}
+        title={record.Title} subtitle={record.Subtitle}
+        avatar={record.Avatar ? <Image src={record.Avatar} alt={record.Title} /> : record.Title && record.Title.substring(0, 1)}
+        action={hasAction ? <Action variant={vPaper} record={record} onSave={handleSaveInfographic} /> : undefined}
+        footer={record.Footer}>
 
-        {record.Articles &&
-            <Grid container spacing={3}>
-                {record.Articles.map((result, i) => (
-                    <Grid key={result.Key} item xs={result.GridTemplate[2]} sm={result.GridTemplate[1]} md={result.GridTemplate[0]}>
-                        {result.Type === "standalone" &&
-                            <Header variant="standalone" pattern={result.Pattern} title={result.Title}
-                                subtitle={result.Subtitle} avatar={result.Image} color={result.Color}
-                                action={hasAction ? <InfographicAction variant="standalone" record={result} onSave={handleSaveInfographic} /> : undefined} />
-                        }
+        {record.Articles && record.Articles.map((article, i) => (
+            <Timeline key={article.Key} layout={article.Layout}
+                color={article.Color} style={article.Style}
+                title={article.Title} subtitle={article.Subtitle}
+                avatar={article.Avatar ? <Image src={article.Avatar} alt={article.Title} /> : article.Title && article.Title.substring(0, 1)}
+                action={hasAction ? <Action parent={record.Key} variant={vArticle} record={article} onSave={handleSaveInfographic} /> : undefined}
+                footer={article.Footer}>
 
-                        {result.Type !== "standalone" &&
-                            <InfographicArticle hasAction={hasAction} variant="article"
-                                record={result} onSave={handleSaveInfographic} style={record.ArticleStyle}>
-                                {result.Content}
-                            </InfographicArticle>
-                        }
-                    </Grid>
+                {article.Sections && article.Sections.map((section, i) => (
+                    <TimelineItem key={section.Key} color={section.Color}
+                        style={{ '--height': article.SectionHeight, ...section.Style }}
+                        title={section.Title} subtitle={section.Subtitle}
+                        avatar={section.Avatar ? <Image src={section.Avatar} alt={section.Title} /> : section.Title && section.Title.substring(0, 1)}
+                        action={hasAction ? <Action parent={article.Key} variant={vSection} record={section} onSave={handleSaveInfographic} /> : undefined}>
+
+                        {section.Content}
+
+                    </TimelineItem>
                 ))}
-            </Grid>
-        }
-
-    </InfographicArticle>;
+            </Timeline>
+        ))}
+    </Paper >;
 }
 
-
-function InfographicArticle(props) {
-    const { children, hasAction, record, variant, style = {}, onSave } = props;
-
-    return <Article variant={variant} color={record.Color} style={style}
-        header={
-            <Header variant={variant} pattern={record.Pattern} title={record.Title}
-                subtitle={record.Subtitle} avatar={record.Image}
-                action={hasAction ? <InfographicAction variant={variant}
-                    record={record} onSave={onSave} /> : undefined} />
-        }
-        footer={record.Footer ? <Footer variant={variant} >{record.Footer}</Footer> : undefined}>
-        {children}
-
-
-    </Article>
-}
-
-function InfographicAction(props) {
-    const { record, variant, onSave } = props;
+function Action(props) {
+    const { parent, record, variant, onSave } = props;
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const handleClick = (event) => { setAnchorEl(event.currentTarget); };
@@ -95,18 +82,13 @@ function InfographicAction(props) {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'center', }}
             transformOrigin={{ vertical: 'top', horizontal: 'center', }}>
 
-            <Article variant="section" color={record.Color}>
+            <Paper color={record.Color} variant="panel">
                 <MenuList>
-                    {variant === "section" &&
-                        <InfographicForm onSave={onSave}
-                            onClose={handleClose} label="Create Article" />
-                    }
-
-                    <InfographicForm record={record} onSave={onSave}
-                        onClose={handleClose} label={"Edit ".concat(record.Title)} />
+                    {variant === vPaper && <InfographicForm parent={record.Key} variant={vArticle} onSave={onSave} onClose={handleClose} label="Create Article" />}
+                    {variant === vArticle && <InfographicForm parent={record.Key} variant={vSection} onSave={onSave} onClose={handleClose} label="Create Section" />}
+                    <InfographicForm parent={parent} variant={variant} record={record} onSave={onSave} onClose={handleClose} label={"Edit ".concat(record.Title)} />
                 </MenuList>
-            </Article>
-
+            </Paper>
         </Popover>
     </React.Fragment>;
 }

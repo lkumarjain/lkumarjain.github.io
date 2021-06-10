@@ -14,7 +14,7 @@ export default function PaperExample(props) {
                         A logical composition of Partition having a logical name for producing and consuming records (Events) or a fundamental unit for organizing events
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Paper variant="section" title="Apache Kafka" subtitle="EVENT STREAMING PLATFORM"
+                        <Paper variant="panel" title="Apache Kafka" subtitle="EVENT STREAMING PLATFORM"
                             avatar="E" action="A" color="Purple"
                             footer="https://lkumarjain.blogspot.com/">
 

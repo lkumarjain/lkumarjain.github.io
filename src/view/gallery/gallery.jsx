@@ -1,6 +1,6 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import { Article, Footer, Header, Image } from "../../components";
+import { Article, Footer, Header, Image, Paper } from "../../components";
 
 export default function Gallery(props) {
     const { path } = props;
@@ -34,10 +34,10 @@ export default function Gallery(props) {
 
 function GalleryItem(props) {
     const { record, color } = props;
-    return <Article variant="panel" color={color} style={{ height: "100%" }}
-        header={<Header variant="panel" title={record.Title} subtitle={record.Subtitle} align="left" />}
-        footer={<Footer variant="panel" align="justify">{record.Description}</Footer>}>
+    return <Paper variant="panel" color={color} style={{ height: "100%" }}
+        title={record.Title} subtitle={record.Subtitle}
+        footer={<Typography variant="panel" align="justify">{record.Description}</Typography>}>
 
         <Image src={record.Image} alt={record.Title} lightbox />
-    </Article>
+    </Paper>
 }

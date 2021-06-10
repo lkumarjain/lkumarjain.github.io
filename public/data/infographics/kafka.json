@@ -5,15 +5,12 @@
     "Avatar": "/img/logo/kafka.png",
     "Footer": "https://lkumarjain.blogspot.com/",
     "Color": "Red",
-    "Articles": [
-        {
+    "Articles": [{
             "Key": "article_1619513323561",
             "Color": "Purple",
-            "Style": {
-                "--height": "150px"
-            },
-            "Sections": [
-                {
+            "SectionHeight": "150px",
+            "Layout": "layout-3321",
+            "Sections": [{
                     "Key": "article_1629513323562",
                     "Color": "Purple",
                     "Title": "Event",
@@ -69,11 +66,9 @@
             "Subtitle": "Client Applications that are Read from Topic Partition​",
             "Title": "Con​sumer",
             "Order": 6,
-            "Style": {
-                "--height": "150px"
-            },
-            "Sections": [
-                {
+            "SectionHeight": "150px",
+            "Layout": "layout-3321",
+            "Sections": [{
                     "Key": "article_1619513925607",
                     "Content": "A monotonically increasing number that serves as a unique identifier for a record in a partition. A consumer internally maintains an offset that points to the next record​",
                     "Title": "Offset",
@@ -130,11 +125,9 @@
             "Subtitle": "Infrastructure Code should be Written by Community​",
             "Title": "Eco-System",
             "Order": 13,
-            "Style": {
-                "--height": "150px"
-            },
-            "Sections": [
-                {
+            "SectionHeight": "150px",
+            "Layout": "layout-2221",
+            "Sections": [{
                     "Key": "article_1619514536959",
                     "Color": "Teal",
                     "Content": "Think of a stream as an unbounded continues real-time flow of records. The most common use cases of streams are filtering, joining, grouping, and aggregation​",
@@ -158,11 +151,9 @@
             "Subtitle": "Shortcoming that may cause Developer Frustrations​",
             "Title": "Gotchas",
             "Order": 16,
-            "Style": {
-                "--height": "150px"
-            },
-            "Sections": [
-                {
+            "SectionHeight": "150px",
+            "Layout": "layout-2221",
+            "Sections": [{
                     "Key": "article_1619514780934",
                     "Content": "The number of configuration parameters in Kafka can be overwhelming, not only for new commers but also seasoned pro​",
                     "Title": "Tunable Knobs​",
