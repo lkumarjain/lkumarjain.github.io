@@ -1,5 +1,6 @@
 import Article from './article';
 import Colors from './colors';
+import Figure from './figure';
 import Footer from './footer';
 import Header from './header';
 import Image from './image';
@@ -12,6 +13,7 @@ import TimelineItem from './timeline/timelineItem'
 export {
     Article,
     Colors,
+    Figure,
     Footer,
     Header,
     Image,

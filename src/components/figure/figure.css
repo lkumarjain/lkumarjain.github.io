@@ -1,0 +1,59 @@
+.jn-figure {
+    display: block;
+    padding: 16px;
+    border-radius: 16px;
+    margin: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    background: linear-gradient(110deg, var(--C300) 0%, var(--C500) 100%);
+    box-shadow: 0px 5px 20px -10px var(--C800);
+    transition: 0.4s;
+}
+
+.jn-figure-header {
+    display: block;
+    padding: 15px;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+    background: var(--C100);
+    color: var(--C800);
+    border-bottom: 10px solid var(--CA100);
+}
+
+.jn-figure-header .title {
+    font-size: 20px;
+    font-weight: 700;
+    font-variant: small-caps;
+    overflow: hidden;
+}
+
+.jn-figure-header .subtitle {
+    font-size: 12px;
+    overflow: hidden;
+    font-weight: 400;
+    color: var(--C500);
+}
+
+.jn-figure-content {
+    padding: 0px;
+    margin: 0px;
+    background: var(--C50);
+    border-radius: 5px;
+    height: 100%;
+}
+
+.jn-figure .jn-figure-content .jn-figure-image {
+    border-radius: 0px;
+}
+
+.jn-figure-caption {
+    background: var(--C50);
+    color: var(--C800);
+    text-align: justify;
+    padding: 16px;
+    border-radius: 0px 0px 5px 5px;
+}

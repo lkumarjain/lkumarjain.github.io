@@ -4,7 +4,8 @@ import Oops from '../oops';
 import './image.css';
 
 export default function Image(props) {
-    const { src, alt, variant = "default", pattern = "", lightbox = false, onClick, onError, className, ...rest } = props;
+    const { src, alt, variant = "default", pattern = "", credit, lightbox = false,
+        onClick, onError, className, ...rest } = props;
 
     const [state, setState] = React.useState({ errored: false, lightbox: false });
     function handleError(event) {
@@ -19,20 +20,23 @@ export default function Image(props) {
         else if (onClick) { onClick(event); }
     }
 
-    return <>
+    return <div className="jn-image-wrapper">
+        
         {!state.errored &&
             <img src={src} alt={alt} onError={handleError} onClick={handleClick}
-                className={["material-image", variant, pattern, className].join(' ')} {...rest} />
+                className={["jn-image", variant, pattern, className].join(' ')} {...rest} />
         }
-        {state.errored && <Oops className={["material-image", variant, pattern, className].join(' ')} />}
+        {state.errored && <Oops className={["jn-image", variant, pattern, className].join(' ')} />}
+
+        {credit && <div className="jn-image-credit">{credit}</div>}
 
         {state.lightbox &&
-            <div className="material-image-lightbox" onClick={handleClick}>
+            <div className="jn-image-lightbox" onClick={handleClick}>
                 <img src={src} alt={alt} onError={handleError}
-                    className={["material-image", "default"].join(' ')} />
+                    className={["jn-image", "default"].join(' ')} />
             </div>
         }
-    </>
+    </div>
 }
 
 Image.propTypes = {
@@ -41,6 +45,7 @@ Image.propTypes = {
     pattern: PropTypes.oneOf(['', 'bevel', 'circle', 'decagon', 'ellipse', 'heptagon', 'hexagon', 'message', 'nonagon', 'octagon', 'parallelogram', 'pentagon', 'rabbet', 'rhombus']),
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
+    credit: PropTypes.node,
     lightbox: PropTypes.bool,
     onClick: PropTypes.func,
     onError: PropTypes.func,

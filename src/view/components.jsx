@@ -40,7 +40,7 @@ export default function Components(props) {
             </Card>
         </Grid>
         <Grid item xs={4}>
-            <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" />
+            <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" lightbox/>
         </Grid>
         <Grid item xs={4}>
             <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" variant="avatar" />
