@@ -1,0 +1,19 @@
+.jn-gallery {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: blue;
+}
+
+.jn-gallery-item {
+    display: block;
+    float: left;
+    background-color: #f1f1f1;
+    width: calc(33% - 40px);
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 10px;
+    font-size: 16px;
+}

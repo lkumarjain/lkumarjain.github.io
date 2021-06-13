@@ -11,17 +11,14 @@ export default function Figure(props) {
 
     return <figure style={{ ...style, ...colors[color] }}
         className={["jn-figure", variant, pattern, className].join(' ')} {...rest}>
-        <div className="jn-figure-content">
-            {title &&
-                <header className={["jn-figure-header", variant].join(' ')}>
-                    <div className="title">{title}</div>
-                    {subtitle && <div className="subtitle">{subtitle}</div>}
-                </header>
-            }
-            {src && <Image src={src} alt={alt} lightbox={lightbox} credit={credit} className="jn-figure-image" />}
 
-            {children && <figcaption className="jn-figure-caption">{children}</figcaption>}
-        </div>
+        <header className={["jn-figure-header", variant].join(' ')}>
+            {title && <div className="title">{title}</div>}
+            {subtitle && <div className="subtitle">{subtitle}</div>}
+            {src && <Image src={src} alt={alt} lightbox={lightbox} credit={credit} className="jn-figure-image" />}
+        </header>
+
+        {children && <figcaption className="jn-figure-caption">{children}</figcaption>}
     </figure>;
 }
 
