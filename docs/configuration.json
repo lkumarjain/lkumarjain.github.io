@@ -17,6 +17,17 @@
                     "Name": "Go Module"
                 }
             ]
+        },
+        {
+            "Name": "Components",
+            "Items": [
+                {
+                    "Type": "LINK",
+                    "Key": "components",
+                    "URI": "/components",
+                    "Name": "Examples"
+                }
+            ]
         }
     ]
 }

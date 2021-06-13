@@ -15,7 +15,7 @@ const vArticle = "article";
 const vSection = "section";
 
 export default function Infographic(props) {
-    const { path = "/data/infographics/kafka.json", hasAction = true } = props;
+    const { path, hasAction = false } = props;
 
     const [record, setRecord] = React.useState(Persistance.Read(recordKey, {}));
     const source = Persistance.Read(sourceKey, "");
