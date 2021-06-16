@@ -1,10 +1,9 @@
 {
     "Home": "/data/infographics/kafkabasics.json",
-    "Navigations": [
-        {
-            "Name": "Infographics",
-            "Items": [
-                {
+    "Navigations": [{
+            "Title": "Infographics",
+            "Subtitle": "Technical Guide",
+            "Items": [{
                     "Type": "LINK",
                     "Key": "kafka-basics-infographics",
                     "URI": "/infographics/kafkabasics",
@@ -19,15 +18,14 @@
             ]
         },
         {
-            "Name": "Components",
-            "Items": [
-                {
-                    "Type": "LINK",
-                    "Key": "components",
-                    "URI": "/components",
-                    "Name": "Examples"
-                }
-            ]
+            "Title": "Components",
+            "Subtitle": "Demo / Example",
+            "Items": [{
+                "Type": "LINK",
+                "Key": "components",
+                "URI": "/components",
+                "Name": "Examples"
+            }]
         }
     ]
 }

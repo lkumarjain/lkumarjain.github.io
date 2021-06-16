@@ -1,0 +1,29 @@
+.jn-nav.accordion {
+    padding: 5px;
+}
+
+.jn-nav.accordion .jn-sub-nav-content {
+    margin: 5px;
+    width: calc(100% - 20px);
+    border-left: 5px solid var(--C100);
+    border-bottom: 5px solid var(--C100);
+    border-right: 5px solid var(--C100);
+}
+
+.jn-nav.accordion .jn-sub-nav .jn-nav-btn {
+    width: calc(100% - 10px);
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.jn-nav.accordion .jn-sub-nav .jn-nav-btn.active {
+    margin-bottom: -5px;
+}
+
+.jn-nav.accordion .jn-nav-link {
+    margin-bottom: 0px;
+}
+
+.jn-nav.accordion .jn-nav-header .action {
+    display: none;
+}
