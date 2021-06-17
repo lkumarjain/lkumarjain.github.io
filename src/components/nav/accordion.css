@@ -1,5 +1,5 @@
 .jn-nav.accordion {
-    padding: 5px;
+    padding: 5px 0px 10px 0px;
 }
 
 .jn-nav.accordion .jn-sub-nav-content {
@@ -22,6 +22,10 @@
 
 .jn-nav.accordion .jn-nav-link {
     margin-bottom: 0px;
+}
+
+.jn-nav.accordion .jn-nav-divider {
+    border-bottom: 1px solid var(--C100);
 }
 
 .jn-nav.accordion .jn-nav-header .action {

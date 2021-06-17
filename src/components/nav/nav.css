@@ -4,7 +4,7 @@
     font-size: 16px;
     font-weight: 400;
     font-variant: small-caps;
-    margin: 10px 0px;
+    margin: 0px;
     border-radius: 5px;
     position: relative;
 }
@@ -16,7 +16,7 @@
     font-variant: small-caps;
     height: auto;
     padding: 5px 0px 5px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--C500);
     border-bottom: 2px solid var(--CA100);
 }
@@ -44,7 +44,9 @@
     line-height: var(--ach);
     margin: auto;
     z-index: 1;
-    top: 5px;
+    top: 2px;
+    font-size: 30px;
+    font-weight: 900;
     right: 5px;
     border-radius: 10px;
     border: 5px solid var(--C200);
@@ -58,35 +60,59 @@
 }
 
 .jn-nav .jn-nav-link {
-    display: block;
-    font-size: 16px;
-    padding: 16px;
-    margin: 5px;
-    color: var(--C600);
     text-align: left;
     text-decoration: none;
 }
 
+.jn-nav .jn-nav-link svg,
+.jn-sub-nav .jn-nav-btn svg {
+    margin: 0px -2px -5px 0px;
+}
+
 .jn-sub-nav {
     overflow: hidden;
+    margin: 0px;
+    padding: 0px;
 }
 
 .jn-sub-nav .jn-nav-btn {
-    display: block;
-    padding: 16px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
     border: none;
     outline: none;
-    color: var(--C600);
     background-color: var(--C50);
     font-family: inherit;
+    position: relative;
+}
+
+.jn-sub-nav .jn-nav-btn:after {
+    content: '▼';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.jn-sub-nav .jn-nav-btn.active::after {
+    content: '▲';
+    top: 15px;
 }
 
 .jn-sub-nav .jn-nav-btn.active {
     background-color: var(--C100);
     border-radius: 5px 5px 0px 0px;
+}
+
+.jn-nav .jn-nav-item {
+    display: block;
+    padding: 16px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--C600);
+}
+
+.jn-nav .jn-nav-divider:last-child {
+    border-bottom: 0px solid;
 }
 
 .jn-sub-nav-content {
@@ -99,6 +125,10 @@
     width: 100%;
 }
 
+.jn-elevated {
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
 @media (min-width: 621px) {
     .jn-nav .jn-nav-link:hover {
         background-color: var(--C100);
@@ -107,6 +137,9 @@
     .jn-nav .jn-sub-nav:hover .jn-nav-btn:hover {
         background-color: var(--C100);
         border-radius: 5px 5px 0px 0px;
+    }
+    .jn-nav .jn-sub-nav:hover .jn-nav-btn:hover:after {
+        top: 15px;
     }
 }
 
