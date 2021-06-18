@@ -10,7 +10,7 @@
 .jn-nav.navbar .jn-sub-nav-content {
     position: absolute;
     left: 0;
-    z-index: 1;
+    z-index: 9999;
 }
 
 .jn-nav.navbar .jn-sub-nav .jn-nav-btn {
@@ -23,6 +23,12 @@
 
 .jn-nav.navbar .jn-nav-header {
     display: none;
+    border-bottom: 0px solid var(--CA100);
+}
+
+.jn-nav.navbar .jn-nav-item {
+    padding: 16px 8px;
+    margin: 5px 0px;
 }
 
 @media (max-width: 620px) {
@@ -52,8 +58,15 @@
     .jn-nav.navbar .jn-nav-header {
         display: block;
     }
+    .jn-nav.navbar .jn-nav-header.active {
+        border-bottom: 2px solid var(--CA100);
+    }
     .jn-nav.navbar .jn-sub-nav .jn-nav-btn:after {
         display: initial;
+    }
+    .jn-nav.navbar .jn-nav-item {
+        padding: 16px;
+        margin: 5px;
     }
     .jn-nav.navbar .jn-nav-divider {
         border-bottom: 1px solid var(--C100);

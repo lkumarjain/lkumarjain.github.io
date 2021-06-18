@@ -1,52 +1,21 @@
-import { Card, CardContent, Grid, Typography } from "@material-ui/core";
-import { Image } from "../components";
+import Example from './examples/example';
 import NavigationExample from "./examples/navigationExample";
-import PanelExample from "./examples/panelExample";
 import PaperExample from "./examples/paperExample";
 import TimelineExample from "./examples/timelineExample";
+import ImageExample from "./examples/imageExample";
+import OopsExample from "./examples/oopsExample";
+import FigureExample from "./examples/figureExample";
 
 export default function Components(props) {
-    return <Grid container spacing={2}>
-        <Grid item xs={12}>
-            <Card>
-                <CardContent>
-                    <Typography color="textSecondary" gutterBottom>Timeline Component</Typography>
-                    <TimelineExample />
-                </CardContent>
-            </Card>
-        </Grid>
-        <Grid item xs={12}>
-            <Card>
-                <CardContent>
-                    <Typography color="textSecondary" gutterBottom>Paper Component</Typography>
-                    <PaperExample />
-                </CardContent>
-            </Card>
-        </Grid>
-        <Grid item xs={12}>
-            <Card>
-                <CardContent>
-                    <Typography color="textSecondary" gutterBottom>Navigation Component</Typography>
-                    <NavigationExample />
-                </CardContent>
-            </Card>
-        </Grid>
-        <Grid item xs={12}>
-            <Card>
-                <CardContent>
-                    <Typography color="textSecondary" gutterBottom>Panel Component</Typography>
-                    <PanelExample />
-                </CardContent>
-            </Card>
-        </Grid>
-        <Grid item xs={4}>
-            <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" lightbox/>
-        </Grid>
-        <Grid item xs={4}>
-            <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" variant="avatar" />
-        </Grid>
-        <Grid item xs={4}>
-            <Image src="https://www.w3schools.com/howto/img_snow.jpg" alt="img_snow" pattern="decagon" />
-        </Grid>
-    </Grid>
+    const { component } = props;
+
+    return <Example>
+        {component === "image" && <ImageExample />}
+        {component === "figure" && <FigureExample />}
+        {component === "oops" && <OopsExample />}
+        {component === "nav" && <NavigationExample />}
+        {component === "paper" && <PaperExample />}
+        {component === "timeline" && <TimelineExample />}
+        {!component && <OopsExample />}
+    </Example>;
 }

@@ -2,21 +2,23 @@ import { Home } from "@material-ui/icons";
 import React from "react";
 import Colors from '../../components/colors'
 import { Nav, NavItem } from '../../components/nav'
+import Social from '../common/layout/social';
+
 
 import './playground.css'
 
-const vVariant = "menu";//"accordion"; //
-const vVariantNav = "navbar"; //"accordion"; //
+const vVariant = "accordion"; //"menu";//
+const vVariantNav = "accordion"; //"navbar"; //
 
 export default function Playground(props) {
-    return <Nav title="Nav Bar" subtitle="Nav Bar Example" variant={vVariantNav}>
+    return <Nav variant={vVariantNav}>
         <NavItem to="#Home" label="Home" variant="link" icon={<Home />} />
-        <NavItem to="#About" label="About" variant={vVariant} icon={<Home />}>
+        <NavItem to="#About" label="About" variant={vVariant} icon={<Home />} expanded>
             <NavItem to="#Company" label="Company" variant="link" />
             <NavItem to="#Team" label="Team" variant="link" />
             <NavItem to="#Careers" label="Careers" variant="link" />
         </NavItem>
-        <NavItem to="#Services" label="Services" variant={vVariant}>
+        <NavItem to="#Services" label="Services" variant={vVariant} expanded>
             <NavItem to="#Bring" label="Bring" variant="link" />
             <NavItem to="#Deliver" label="Deliver" variant={vVariant}>
                 <NavItem to="#Bring" label="Food" variant="link" />

@@ -1,56 +1,41 @@
-import { Grid } from "@material-ui/core";
 import React from "react";
-import { Article, Header, Navigation, NavigationItem, NavigationLink } from '../../components'
+import { Home } from "@material-ui/icons";
+import { Nav, NavItem } from '../../components';
+import Example from './example';
 
 export default function NavigationExample(props) {
-    return <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={4}>
-            <Article color="Grey" variant="panel"
-                header={<Header variant="panel" title="Without Sub Section" align="left" />}>
-                <Navigation color="Grey" variant="vertical">
-                    <NavigationLink to="#" name="Link 1" />
-                    <NavigationLink to="#" name="Link 2" />
-                    <NavigationLink to="#" name="Link 3" />
-                    <NavigationLink to="#" name="Link 4" />
-                </Navigation>
-            </Article>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-            <Article color="Grey" variant="panel"
-                header={<Header variant="panel" title="Combination" align="left" />}>
-                <Navigation color="Grey" variant="vertical">
-                    <NavigationLink to="#" name="Link 1" />
-                    <NavigationLink to="#" name="Link 2" />
-                    <NavigationItem name="Link 3">
-                        <NavigationLink to="#" name="Sub Link 1" />
-                        <NavigationLink to="#" name="Sub Link 2" />
-                    </NavigationItem>
-                    <NavigationLink to="#" name="Link 4" />
-                </Navigation>
-            </Article>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4}>
-            <Article color="Grey" variant="panel"
-                header={<Header variant="panel" title="With Sub Section" align="left" />}>
-                <Navigation color="Grey" variant="vertical">
-                    <NavigationItem name="Link 1">
-                        <NavigationLink to="#" name="Sub Link 1" />
-                        <NavigationLink to="#" name="Sub Link 2" />
-                    </NavigationItem>
-                    <NavigationItem name="Link 2">
-                        <NavigationLink to="#" name="Sub Link 1" />
-                        <NavigationLink to="#" name="Sub Link 2" />
-                    </NavigationItem>
-                    <NavigationItem name="Link 3">
-                        <NavigationLink to="#" name="Sub Link 1" />
-                        <NavigationLink to="#" name="Sub Link 2" />
-                    </NavigationItem>
-                    <NavigationItem name="Link 4">
-                        <NavigationLink to="#" name="Sub Link 1" />
-                        <NavigationLink to="#" name="Sub Link 2" />
-                    </NavigationItem>
-                </Navigation>
-            </Article>
-        </Grid>
-    </Grid>;
+    return <Example label="Nav Component" variant="h6" divider>
+        <Example label="Navbar">
+            <Navigation variant="navbar" itemvariant="menu" />
+        </Example>
+
+        <Example label="Accordion">
+            <Navigation variant="accordion" itemvariant="accordion" />
+        </Example>
+    </Example>;
+}
+
+function Navigation(props) {
+    const { variant, itemvariant } = props;
+
+    return <Nav title="Title" subtitle="Subtitle" variant={variant}>
+        <NavItem to="#Home" label="Home" variant="link" icon={<Home />} />
+        <NavItem to="#About" label="About" variant={itemvariant} icon={<Home />}>
+            <NavItem to="#Company" label="Company" variant="link" />
+            <NavItem to="#Team" label="Team" variant="link" />
+            <NavItem to="#Careers" label="Careers" variant="link" />
+        </NavItem>
+        <NavItem to="#Services" label="Services" variant={itemvariant} icon={<Home />}>
+            <NavItem to="#Bring" label="Bring" variant="link" />
+            <NavItem to="#Deliver" label="Deliver" variant={itemvariant}>
+                <NavItem to="#Bring" label="Food" variant="link" />
+                <NavItem to="#Bring" label="Hardware" variant="link" />
+                <NavItem to="#Bring" label="Electronics" variant="link" />
+            </NavItem>
+            <NavItem to="#Package" label="Package" variant="link" />
+            <NavItem to="#Express" label="Express" variant="link" />
+        </NavItem>
+        <NavItem to="#Partners" label="Partners" icon={<Home />} variant="link" />
+        <NavItem to="#Contact" label="Contact" icon={<Home />} variant="link" />
+    </Nav>;
 }

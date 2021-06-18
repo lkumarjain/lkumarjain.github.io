@@ -48,12 +48,20 @@ function GalleryHandler() {
     return <Gallery path={"/data/gallery/" + key + ".json"} hasAction={query.get("action") === "Show"} />;
 }
 
+
+function ComponentHandler() {
+    //`useParams` hook is used for accessing Path Param.
+    let { key } = useParams();
+
+    return <Components component={key} />;
+}
+
 function RouteGenerator(props) {
     const { config } = props;
     return <Switch>
         <Route exact path="/" children={<Home config={config} />} />
-        <Route exact path="/components" children={<Components />} />
         <Route exact path="/playground" children={<Playground />} />
+        <Route exact path="/components/:key" children={<ComponentHandler />} />
         <Route exact path="/gallery/:key" children={<GalleryHandler />} />
         <Route path="/infographics/:key" children={<InfographicHandler />} />
     </Switch>;

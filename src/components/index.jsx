@@ -1,25 +1,18 @@
-import Article from './article';
 import Colors from './colors';
 import Figure from './figure';
-import Footer from './footer';
-import Header from './header';
 import Image from './image';
-import { Navigation, NavigationItem, NavigationLink } from './navigation';
+import { Nav, NavItem } from './nav';
 import Oops from './oops'
 import Paper from './paper'
 import Timeline from './timeline/timeline'
 import TimelineItem from './timeline/timelineItem'
 
 export {
-    Article,
     Colors,
     Figure,
-    Footer,
-    Header,
     Image,
-    Navigation,
-    NavigationItem,
-    NavigationLink,
+    Nav,
+    NavItem,
     Oops,
     Paper,
     Timeline,

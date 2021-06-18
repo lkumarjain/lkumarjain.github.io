@@ -2,44 +2,58 @@ import React from "react";
 import { Timeline, TimelineItem } from "../../components";
 
 export default function TimelineExample(props) {
-    return <Timeline title="Apache Kafka"
-        subtitle="AN OPEN-SOURCE DISTRIBUTED EVENT STREAMING PLATFORM"
-        avatar="E" action="A"
+    return <Timeline title="Lorem Ipsum" subtitle="Simply dummy text of the printing and typesetting industry"
+        avatar="L" action="A"
         footer="https://lkumarjain.blogspot.com/">
 
-        <TimelineItem title="Event" subtitle="Record or Message"
-            avatar="E" action="A"
+        <TimelineItem title="Lorem Ipsum" subtitle="Simply dummy text"
+            avatar="S" action="A"
             footer="footer">
-            A logical composition of Partition having a logical name
-            for producing and consuming records (Events)
-            or a fundamental unit for organizing events
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </TimelineItem>
 
-        <TimelineItem title="Event" subtitle="Record or Message"
-            avatar="E" action="A" color="Purple">
-            A logical composition of Partition having a logical name
-            for producing and consuming records (Events)
-            or a fundamental unit for organizing events
+        <TimelineItem title="Lorem Ipsum" subtitle="Simply dummy text"
+            avatar="S" action="A" color="Purple">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </TimelineItem>
 
-        <TimelineItem title="Event" subtitle="Record or Message"
-            avatar="E" action="A" color="Grey">
-            A logical composition of Partition having a logical name
-            for producing and consuming records (Events)
-            or a fundamental unit for organizing events
+        <TimelineItem title="Lorem Ipsum" subtitle="Simply dummy text"
+            avatar="S" action="A" color="Grey">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </TimelineItem>
 
-        <TimelineItem title="Event" subtitle="Record or Message"
-            avatar="E" action="A" color="Blue">
-            A logical composition of Partition having a logical name
-            for producing and consuming records (Events)
-            or a fundamental unit for organizing events
+        <TimelineItem title="Lorem Ipsum" subtitle="Simply dummy text"
+            avatar="S" action="A" color="Blue">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </TimelineItem>
 
-        <TimelineItem title="Event" subtitle="Record or Message" color="Green">
-            A logical composition of Partition having a logical name
-            for producing and consuming records (Events)
-            or a fundamental unit for organizing events
+        <TimelineItem title="Lorem Ipsum" subtitle="Simply dummy text" color="Green">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </TimelineItem>
     </Timeline>;
 }

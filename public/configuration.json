@@ -1,31 +1,70 @@
 {
     "Home": "/data/infographics/kafkabasics.json",
     "Navigations": [{
-            "Title": "Infographics",
-            "Subtitle": "Technical Guide",
+            "To": "/",
+            "Label": "Home",
+            "Variant": "link",
+            "Icon": "Home"
+        },
+        {
+            "Label": "Infographics",
+            "Variant": "menu",
+            "Icon": "Receipt",
             "Items": [{
-                    "Type": "LINK",
-                    "Key": "kafka-basics-infographics",
-                    "URI": "/infographics/kafkabasics",
-                    "Name": "Apache Kafka"
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/infographics/kafkabasics",
+                    "Label": "Apache Kafka"
                 },
                 {
-                    "Type": "LINK",
-                    "Key": "gomod-gallery",
-                    "URI": "/gallery/gomod",
-                    "Name": "Go Module"
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/gallery/gomod",
+                    "Label": "Go Module"
                 }
             ]
         },
         {
-            "Title": "Components",
-            "Subtitle": "Demo / Example",
+            "Label": "Components",
+            "Variant": "menu",
+            "Icon": "Settings",
             "Items": [{
-                "Type": "LINK",
-                "Key": "components",
-                "URI": "/components",
-                "Name": "Examples"
-            }]
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/figure",
+                    "Label": "Figure"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/image",
+                    "Label": "Image"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/nav",
+                    "Label": "Navigation"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/oops",
+                    "Label": "Oops"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/paper",
+                    "Label": "Paper"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/components/timeline",
+                    "Label": "Timeline"
+                }
+            ]
         }
     ]
 }

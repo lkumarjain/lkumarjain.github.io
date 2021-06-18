@@ -4,8 +4,9 @@
     font-size: 16px;
     font-weight: 400;
     font-variant: small-caps;
-    margin: 0px;
-    border-radius: 5px;
+    margin: 10px 0px;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 10px solid var(--CA100);
     position: relative;
 }
 
@@ -125,10 +126,6 @@
     width: 100%;
 }
 
-.jn-elevated {
-    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-}
-
 @media (min-width: 621px) {
     .jn-nav .jn-nav-link:hover {
         background-color: var(--C100);
@@ -166,3 +163,4 @@
 
 @import url('./navbar.css');
 @import url('./accordion.css');
+@import url('../common.css');

@@ -8,12 +8,11 @@
     position: absolute;
     padding: 5px;
     margin: 0px 5px;
-    left: 50%;
-    bottom: -10px;
-    transform: translate(-50%, -50%);
+    right: 5px;
+    bottom: 5px;
     font-size: 14px;
-    background: var(--C400);
-    color: var(--C50);
+    background: rgba(0, 0, 0, 0.8);
+    color: #FAFAFA;
     border-radius: 5px;
     opacity: .7;
 }
