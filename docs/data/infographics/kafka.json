@@ -1,0 +1,191 @@
+{
+    "Key": "kafka_infographic",
+    "Title": "Apache Kafka",
+    "Subtitle": "An open-source distributed event streaming platform",
+    "Avatar": "/img/logo/kafka.png",
+    "Footer": "https://lkumarjain.blogspot.com/",
+    "Color": "Red",
+    "Articles": [{
+            "Key": "article_1619513323561",
+            "Color": "Purple",
+            "SectionHeight": "150px",
+            "Layout": "layout-3321",
+            "Sections": [{
+                    "Key": "article_1629513323562",
+                    "Color": "Purple",
+                    "Title": "Event",
+                    "Subtitle": "Record / Message",
+                    "Content": "Event (Record or Message) is just a thing that have happened with a description",
+                    "Order": 0
+                },
+                {
+                    "Key": "article_1619513412169",
+                    "Color": "Purple",
+                    "Title": "Topic",
+                    "Subtitle": "Logical Composition",
+                    "Content": "A logical composition of Partition having a logical name for producing and consuming records (Events) or a fundamental unit for organizing events​",
+                    "Order": 1
+                },
+                {
+                    "Key": "article_1619513438198",
+                    "Color": "Purple",
+                    "Content": "Multiple non-overlapping subsets of records with-in a topic (partitioning) to store records across machines. A Topic partition is totally ordered sequence of records​",
+                    "Title": "Partition",
+                    "Subtitle": "Sequence of Events",
+                    "Order": 2
+                },
+                {
+                    "Key": "article_1619513513128",
+                    "Color": "Purple",
+                    "Content": "Copies (replicates) of partition records across multiple nodes. Every partition has one leader and N-1 follower to provide fault-tolerance​",
+                    "Title": "Replication",
+                    "Order": 3,
+                    "Subtitle": "Copies / Replicates"
+                },
+                {
+                    "Key": "article_1619513622472",
+                    "Color": "Purple",
+                    "Content": "A computer instance or a container running Apache Kafka process to manage partitions, replication of these partitions​",
+                    "Title": "Broker",
+                    "Order": 4,
+                    "Subtitle": "Computer Instance"
+                },
+                {
+                    "Key": "article_1619513675278",
+                    "Color": "Purple",
+                    "Title": "Producer",
+                    "Content": "Client application responsible for appending records to the log file of a Topic partition. Actual I/O is performed by the broker on behalf of producer client​",
+                    "Order": 5,
+                    "Subtitle": "Writer Client Application"
+                }
+            ]
+        },
+        {
+            "Key": "article_1619513756954",
+            "Color": "Indigo",
+            "Subtitle": "Client Applications that are Read from Topic Partition​",
+            "Title": "Con​sumer",
+            "Order": 6,
+            "SectionHeight": "150px",
+            "Layout": "layout-3321",
+            "Sections": [{
+                    "Key": "article_1619513925607",
+                    "Content": "A monotonically increasing number that serves as a unique identifier for a record in a partition. A consumer internally maintains an offset that points to the next record​",
+                    "Title": "Offset",
+                    "Subtitle": "Unique Identifier",
+                    "Order": 7,
+                    "Color": "Indigo"
+                },
+                {
+                    "Key": "article_1619514009952",
+                    "Type": "article",
+                    "Color": "Indigo",
+                    "Content": "Lag for a topic partition is expressed as number of offsets that are behind the head of partition.​",
+                    "Title": "Lag",
+                    "Subtitle": "#Events to be Consumed",
+                    "Order": 8
+                },
+                {
+                    "Key": "article_1619514113512",
+                    "Color": "Indigo",
+                    "Content": "A topic partition is an append-only ledger that may only be mutated by the Producer or Kafka itself. Consumer should commit its offsets frequently to avoid duplication​",
+                    "Title": "Commit",
+                    "Subtitle": "Consumed Event Identifier",
+                    "Order": 9
+                },
+                {
+                    "Key": "article_1619514191818",
+                    "Color": "Indigo",
+                    "Content": "Topic partitions are assigned to balance the assignments among all consumers in the logical group. All consumers work in a balanced mode​",
+                    "Title": "Consumer Group​",
+                    "Subtitle": "Logical Group",
+                    "Order": 10
+                },
+                {
+                    "Key": "article_1619514246338",
+                    "Color": "Indigo",
+                    "Content": "The optimal number of consumers should be equal or less then number of partitions to avoid any idle consumer​",
+                    "Title": "Idle Consumer​",
+                    "Order": 11,
+                    "Subtitle": "#Consumers Across Group"
+                },
+                {
+                    "Key": "article_1619514325614",
+                    "Color": "Indigo",
+                    "Content": "Consumers across groups are isolated and has their individual partition assignments and offsets​",
+                    "Title": "Isolated Consumers​",
+                    "Subtitle": "#Consumers Across Group",
+                    "Order": 12
+                }
+            ]
+        },
+        {
+            "Key": "article_1619514445488",
+            "Color": "Teal",
+            "Subtitle": "Infrastructure Code should be Written by Community​",
+            "Title": "Eco-System",
+            "Order": 13,
+            "SectionHeight": "150px",
+            "Layout": "layout-2221",
+            "Sections": [{
+                    "Key": "article_1619514536959",
+                    "Color": "Teal",
+                    "Content": "Think of a stream as an unbounded continues real-time flow of records. The most common use cases of streams are filtering, joining, grouping, and aggregation​",
+                    "Title": "Kafka Streams",
+                    "Subtitle": "Unbounded Continues Records",
+                    "Order": 14
+                },
+                {
+                    "Key": "article_1619514599918",
+                    "Color": "Teal",
+                    "Content": "Kafka connect is a framework for connecting non-Kafka systems to Kafka in a declarative way, without requiring you to write a bunch of non-differentiated integration code​",
+                    "Title": "Kafka Connect",
+                    "Subtitle": "Connecting Non-Kafka Systems",
+                    "Order": 15
+                }
+            ]
+        },
+        {
+            "Key": "article_1619514672237",
+            "Color": "Red",
+            "Subtitle": "Shortcoming that may cause Developer Frustrations​",
+            "Title": "Gotchas",
+            "Order": 16,
+            "SectionHeight": "150px",
+            "Layout": "layout-2221",
+            "Sections": [{
+                    "Key": "article_1619514780934",
+                    "Content": "The number of configuration parameters in Kafka can be overwhelming, not only for new commers but also seasoned pro​",
+                    "Title": "Tunable Knobs​",
+                    "Subtitle": "#Configuration Parameters",
+                    "Order": 17,
+                    "Color": "Red"
+                },
+                {
+                    "Key": "article_1619514905610",
+                    "Color": "Red",
+                    "Content": "Kafka defaults tends to be optimized for the performance, and will need to be explicitly overridden on the client when safety is a critical objective​",
+                    "Title": "Unsafe Defaults​",
+                    "Subtitle": "Optimized for Performance",
+                    "Order": 18
+                },
+                {
+                    "Key": "article_1619514959277",
+                    "Color": "Red",
+                    "Content": "Kafka is capable of delivering messages over network as alarmingly fast rate, which can eventually cause a DoS attack if we are using an unchecked Kafka Consumer​",
+                    "Title": "Back-Pressure​",
+                    "Subtitle": "Alarmingly Fast Rate",
+                    "Order": 19
+                },
+                {
+                    "Key": "article_1619515032903",
+                    "Color": "Red",
+                    "Content": "Using older client with newer topic message formats, and vice versa, places extra load on the broker. This should be avoided whenever possible​",
+                    "Title": "Format Conversion​",
+                    "Subtitle": "Extra Load on the Broker",
+                    "Order": 20
+                }
+            ]
+        }
+    ]
+}
