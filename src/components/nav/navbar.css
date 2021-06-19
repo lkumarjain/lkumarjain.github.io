@@ -37,6 +37,17 @@
     }
     .jn-nav.navbar .jn-nav-content.active {
         display: block;
+        position: fixed;
+        top: 0px;
+        width: 75%;
+        left: 0px;
+        bottom: opx;
+        bottom: 0px;
+        z-index: 99999;
+        overflow-y: scroll;
+    }
+    .jn-nav .jn-nav-content.active .action {
+        display: block;
     }
     .jn-nav.navbar .jn-nav-link {
         float: none;

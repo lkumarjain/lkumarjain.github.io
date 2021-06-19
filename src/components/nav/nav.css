@@ -45,7 +45,7 @@
     line-height: var(--ach);
     margin: auto;
     z-index: 1;
-    top: 2px;
+    top: 5px;
     font-size: 30px;
     font-weight: 900;
     right: 5px;
@@ -58,6 +58,24 @@
 .jn-nav-content {
     margin: 0px;
     padding: 0px;
+    background: var(--C50);
+}
+
+.jn-nav .jn-nav-content .action {
+    --nch: 25px;
+    display: none;
+    height: var(--nch);
+    width: var(--nch);
+    line-height: var(--nch);
+    margin: auto;
+    font-size: 25px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 5px solid var(--C200);
+    background: var(--C100);
+    text-align: center;
+    margin: 5px 10px;
+    float: right;
 }
 
 .jn-nav .jn-nav-link {
@@ -65,8 +83,7 @@
     text-decoration: none;
 }
 
-.jn-nav .jn-nav-link svg,
-.jn-sub-nav .jn-nav-btn svg {
+.jn-nav .jn-nav-link svg, .jn-sub-nav .jn-nav-btn svg {
     margin: 0px -2px -5px 0px;
 }
 

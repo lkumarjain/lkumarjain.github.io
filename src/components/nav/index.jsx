@@ -25,7 +25,12 @@ function Nav(props) {
             </header>
         }
 
-        {children && <div className={["jn-nav-content", active ? "active" : ""].join(' ')}>{children}</div>}
+        {children &&
+            <div className={["jn-nav-content", active ? "active" : ""].join(' ')}>
+                <div className="action" onClick={handleClick}>ⅹ</div>
+                {children}
+            </div>
+        }
 
         <div style={{ clear: "both" }}></div>
     </nav>;
