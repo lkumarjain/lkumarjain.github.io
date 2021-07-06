@@ -11,3 +11,9 @@
 ## How to edit infografic
 
 Make use of `action=Show` as an query param for this
+
+## Credits
+
+We would like give a credit to the following tools and contributors.
+
+- Full credit list for [images](/docs/img/credit.md) at /docs/img/credit.md

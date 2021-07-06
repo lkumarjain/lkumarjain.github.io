@@ -1,0 +1,22 @@
+{
+    "Key": "elasticsearch_infographic",
+    "Title": "Elastic Search",
+    "Subtitle": "A Near Real-Time Search Engine",
+    "Avatar": "/img/logo/elasticsearch.png",
+    "Footer": "https://lkumarjain.blogspot.com/",
+    "Color": "Red",
+    "Articles": [{
+        "Key": "article_1619513323561",
+        "Color": "Purple",
+        "SectionHeight": "150px",
+        "Layout": "layout-3321",
+        "Sections": [{
+            "Key": "article_1629513323562",
+            "Color": "Purple",
+            "Title": "Event",
+            "Subtitle": "Record / Message",
+            "Content": "Event (Record or Message) is just a thing that have happened with a description",
+            "Order": 0
+        }]
+    }]
+}
