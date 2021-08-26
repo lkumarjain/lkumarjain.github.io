@@ -1,7 +1,7 @@
 import React from 'react';
-import { Infographic } from './infographic';
+import { Infographics } from './infographics';
 
 export default function Home(props) {
     const { config } = props;
-    return <Infographic path={config.Home} />;
+    return <Infographics path={config.Home} config={config} />;
 }

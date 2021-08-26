@@ -2,20 +2,21 @@ import React from "react";
 import { Image, Paper, Timeline, TimelineItem } from "../../components";
 import { IconButton, MenuList, Popover } from "@material-ui/core";
 import { SettingsSharp } from "@material-ui/icons";
-import InfographicForm from './infographicForm';
+import InfographicsForm from './infographicsForm';
 
 import CommonService from "../../services/common";
 import Persistance from "../../services/persistance";
-import infographicService from "../../services/infographic";
+import infographicsService from "../../services/infographics";
+import InfographicsFooter from "./infographicsFooter";
 
-const sourceKey = "InfographicSource";
-const recordKey = "InfographicRecord";
+const sourceKey = "InfographicsSource";
+const recordKey = "InfographicsRecord";
 const vPaper = "paper";
 const vArticle = "article";
 const vSection = "section";
 
-export default function Infographic(props) {
-    const { path, hasAction = false } = props;
+export default function Infographics(props) {
+    const { path, hasAction = false, config } = props;
 
     const [record, setRecord] = React.useState(Persistance.Read(recordKey, {}));
     const source = Persistance.Read(sourceKey, "");
@@ -32,8 +33,8 @@ export default function Infographic(props) {
         return ""
     }
 
-    function handleSaveInfographic(value, parent) {
-        value = infographicService.AddOrReplace(record, value, parent)
+    function handleSaveInfographics(value, parent) {
+        value = infographicsService.AddOrReplace(record, value, parent)
         Persistance.Write(recordKey, CommonService.Stringify(value));
         setRecord({ ...value });
     }
@@ -41,15 +42,15 @@ export default function Infographic(props) {
     return <Paper color={record.Color} style={record.Style}
         title={record.Title} subtitle={record.Subtitle}
         avatar={record.Avatar ? <Image src={record.Avatar} alt={record.Title} /> : record.Title && record.Title.substring(0, 1)}
-        action={hasAction ? <Action variant={vPaper} record={record} onSave={handleSaveInfographic} /> : undefined}
-        footer={record.Footer}>
+        action={hasAction ? <Action variant={vPaper} record={record} onSave={handleSaveInfographics} /> : undefined}
+        footer={<InfographicsFooter config={config} content={record.Footer} />}>
 
         {record.Articles && record.Articles.map((article, i) => (
             <Timeline key={article.Key} layout={article.Layout}
                 color={article.Color} style={article.Style}
                 title={article.Title} subtitle={article.Subtitle}
                 avatar={article.Avatar ? <Image src={article.Avatar} alt={article.Title} /> : article.Title && article.Title.substring(0, 1)}
-                action={hasAction ? <Action parent={record.Key} variant={vArticle} record={article} onSave={handleSaveInfographic} /> : undefined}
+                action={hasAction ? <Action parent={record.Key} variant={vArticle} record={article} onSave={handleSaveInfographics} /> : undefined}
                 footer={article.Footer}>
 
                 {article.Sections && article.Sections.map((section, i) => (
@@ -57,7 +58,7 @@ export default function Infographic(props) {
                         style={{ '--height': article.SectionHeight, ...section.Style }}
                         title={section.Title} subtitle={section.Subtitle}
                         avatar={section.Avatar ? <Image src={section.Avatar} alt={section.Title} /> : section.Title && section.Title.substring(0, 1)}
-                        action={hasAction ? <Action parent={article.Key} variant={vSection} record={section} onSave={handleSaveInfographic} /> : undefined}>
+                        action={hasAction ? <Action parent={article.Key} variant={vSection} record={section} onSave={handleSaveInfographics} /> : undefined}>
 
                         {section.Content}
 
@@ -84,9 +85,9 @@ function Action(props) {
 
             <Paper color={record.Color} variant="panel">
                 <MenuList>
-                    {variant === vPaper && <InfographicForm parent={record.Key} variant={vArticle} onSave={onSave} onClose={handleClose} label="Create Article" />}
-                    {variant === vArticle && <InfographicForm parent={record.Key} variant={vSection} onSave={onSave} onClose={handleClose} label="Create Section" />}
-                    <InfographicForm parent={parent} variant={variant} record={record} onSave={onSave} onClose={handleClose} label={"Edit ".concat(record.Title)} />
+                    {variant === vPaper && <InfographicsForm parent={record.Key} variant={vArticle} onSave={onSave} onClose={handleClose} label="Create Article" />}
+                    {variant === vArticle && <InfographicsForm parent={record.Key} variant={vSection} onSave={onSave} onClose={handleClose} label="Create Section" />}
+                    <InfographicsForm parent={parent} variant={variant} record={record} onSave={onSave} onClose={handleClose} label={"Edit ".concat(record.Title)} />
                 </MenuList>
             </Paper>
         </Popover>

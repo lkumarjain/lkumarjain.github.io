@@ -1,86 +1,23 @@
-import { Home } from "@material-ui/icons";
 import React from "react";
-import Colors from '../../components/colors'
-import { Nav, NavItem } from '../../components/nav'
-import Social from '../common/layout/social';
-
 
 import './playground.css'
 
-const vVariant = "accordion"; //"menu";//
-const vVariantNav = "accordion"; //"navbar"; //
+const content = `<div class="jn-flex-box">
+        <div class="jn-flex-box-col-4">
+            <div>&copy; Jain's Techno Driblet</div>
+            <div>https://lkumarjain.github.io/</div>
+        </div>
+        <div class="jn-flex-box-col-2" style="text-align: center;">
+        A monotonically increasing number that serves as a unique identifier for a record in a partition. A consumer internally maintains an offset that points to the next record​
+        </div>
+        <div class="jn-flex-box-col-4" style="text-align: right;">
+            <div>Find More details at</div> 
+            <div>https://lkumarjain.blogspot.com/</div>
+        </div>
+        <div class="jn-flex-box-col-1">
+        </div>
+    </div>`
 
 export default function Playground(props) {
-    return <Nav variant={vVariantNav}>
-        <NavItem to="#Home" label="Home" variant="link" icon={<Home />} />
-        <NavItem to="#About" label="About" variant={vVariant} icon={<Home />} expanded>
-            <NavItem to="#Company" label="Company" variant="link" />
-            <NavItem to="#Team" label="Team" variant="link" />
-            <NavItem to="#Careers" label="Careers" variant="link" />
-        </NavItem>
-        <NavItem to="#Services" label="Services" variant={vVariant} expanded>
-            <NavItem to="#Bring" label="Bring" variant="link" />
-            <NavItem to="#Deliver" label="Deliver" variant={vVariant}>
-                <NavItem to="#Bring" label="Food" variant="link" />
-                <NavItem to="#Bring" label="Hardware" variant="link" />
-                <NavItem to="#Bring" label="Electronics" variant="link" />
-            </NavItem>
-            <NavItem to="#Package" label="Package" variant="link" />
-            <NavItem to="#Express" label="Express" variant="link" />
-        </NavItem>
-        <NavItem to="#Partners" label="Partners" variant="link" />
-        <NavItem to="#Contact" label="Contact" variant="link" />
-    </Nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // <nav className="jn-navbar" style={Colors["Grey"]}>
-    //     <a href="#home">Home</a>
-    //     <div class="subnav">
-    //         <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    //         <div class="subnav-content">
-    //             <a href="#company">Company</a>
-    //             <a href="#team">Team</a>
-    //             <div class="subnav">
-    //                 <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    //                 <div class="subnav-content">
-    //                     <a href="#company">Company</a>
-    //                     <a href="#team">Team</a>
-    //                     <a href="#careers">Careers</a>
-    //                 </div>
-    //             </div>
-    //             <a href="#careers">Careers</a>
-    //         </div>
-    //     </div>
-    //     <div class="subnav">
-    //         <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    //         <div class="subnav-content">
-    //             <a href="#bring">Bring</a>
-    //             <a href="#deliver">Deliver</a>
-    //             <a href="#package">Package</a>
-    //             <a href="#express">Express</a>
-    //         </div>
-    //     </div>
-    //     <div class="subnav">
-    //         <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-    //         <div class="subnav-content">
-    //             <a href="#link1">Link 1</a>
-    //             <a href="#link2">Link 2</a>
-    //             <a href="#link3">Link 3</a>
-    //             <a href="#link4">Link 4</a>
-    //         </div>
-    //     </div>
-    //     <a href="#contact">Contact</a>
-    //     <div style={{ clear: "both" }}></div>
-    // </nav>
+    return <div>content</div>
 }

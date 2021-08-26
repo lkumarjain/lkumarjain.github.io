@@ -4,7 +4,7 @@ import Layout from './view/common/layout';
 
 import Components from './view/components';
 import Home from './view/home';
-import { Infographic } from './view/infographic';
+import { Infographics } from './view/infographics';
 import { Gallery } from './view/gallery';
 import Playground from './view/playground';
 
@@ -28,14 +28,16 @@ export default function Application(props) {
     </Router>
 }
 
-function InfographicHandler() {
+function InfographicsHandler(props) {
+    const { config } = props;
+
     //`useParams` hook is used for accessing Path Param.
     let { key } = useParams();
 
     //`useLocation` hook is used for accessing Query Param.
     let query = new URLSearchParams(useLocation().search);
 
-    return <Infographic path={"/data/infographics/" + key + ".json"} hasAction={query.get("action") === "Show"} />
+    return <Infographics config={config} path={"/data/infographics/" + key + ".json"} hasAction={query.get("action") === "Show"} />
 }
 
 function GalleryHandler() {
@@ -63,6 +65,6 @@ function RouteGenerator(props) {
         <Route exact path="/playground" children={<Playground />} />
         <Route exact path="/components/:key" children={<ComponentHandler />} />
         <Route exact path="/gallery/:key" children={<GalleryHandler />} />
-        <Route path="/infographics/:key" children={<InfographicHandler />} />
+        <Route path="/infographics/:key" children={<InfographicsHandler config={config} />} />
     </Switch>;
 }

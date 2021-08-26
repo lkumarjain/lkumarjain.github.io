@@ -1,9 +1,8 @@
 {
-    "Key": "elasticsearch_infographic",
+    "Key": "elasticsearch_infographics",
     "Title": "Elastic Search",
     "Subtitle": "A Near Real-Time Search Engine",
     "Avatar": "/img/logo/elasticsearch.png",
-    "Footer": "https://lkumarjain.blogspot.com/",
     "Color": "Red",
     "Articles": [{
             "Key": "article_1619513323561",

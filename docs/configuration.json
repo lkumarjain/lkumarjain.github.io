@@ -1,6 +1,8 @@
 {
     "Home": "/data/infographics/kafkabasics.json",
-    "Navigations": [{
+    "Title": "Jain's Techno Driblet",
+    "TagLine": "A Drop of Technology for Innovators",
+    "Navigation": [{
             "To": "/",
             "Label": "Home",
             "Variant": "link",

@@ -1,9 +1,8 @@
 {
-    "Key": "kafka_infographic",
+    "Key": "kafka_infographics",
     "Title": "Apache Kafka",
     "Subtitle": "An open-source distributed event streaming platform",
     "Avatar": "/img/logo/kafka.png",
-    "Footer": "https://lkumarjain.blogspot.com/",
     "Color": "Red",
     "Articles": [{
             "Key": "article_1619513323561",
@@ -122,28 +121,86 @@
         {
             "Key": "article_1619514445488",
             "Color": "Teal",
-            "Subtitle": "Infrastructure Code should be Written by Community​",
-            "Title": "Eco-System",
             "Order": 13,
             "SectionHeight": "150px",
             "Layout": "layout-2221",
             "Sections": [{
                     "Key": "article_1619514536959",
                     "Color": "Teal",
-                    "Content": "Think of a stream as an unbounded continues real-time flow of records. The most common use cases of streams are filtering, joining, grouping, and aggregation​",
-                    "Title": "Kafka Streams",
-                    "Subtitle": "Unbounded Continues Records",
-                    "Order": 14
+                    "Order": 14,
+                    "Title": "Real-Time Data Processing",
+                    "Subtitle": "data to be processed as soon as it is available",
+                    "Content": "Most modern applications require data to be processed as soon as it is available. This requires data processing solutions that are efficient, resilient, and scale easily."
                 },
                 {
                     "Key": "article_1619514599918",
                     "Color": "Teal",
-                    "Content": "Kafka connect is a framework for connecting non-Kafka systems to Kafka in a declarative way, without requiring you to write a bunch of non-differentiated integration code​",
-                    "Title": "Kafka Connect",
-                    "Subtitle": "Connecting Non-Kafka Systems",
-                    "Order": 15
+                    "Order": 15,
+                    "Title": "Activity Tracking",
+                    "Content": "Kafka was originally developed for activity tracking to be used in LinkedIn. That implies each activity is published to central topics with one topic per activity type. ",
+                    "Subtitle": "Originally developed for activity tracking"
+                },
+                {
+                    "Key": "section_1628851758876",
+                    "Color": "Teal",
+                    "Title": "Dataflow Middleware",
+                    "Content": "Kafka allows multiple applications to receive the same data at the same time. Using Kafka in the middle makes the pipeline more open and pluggable.",
+                    "Subtitle": "Makes the pipeline more open and pluggable",
+                    "Order": 2
+                },
+                {
+                    "Key": "section_1628851805332",
+                    "Color": "Teal",
+                    "Title": "Complex Analysis",
+                    "Content": "Kafka allows introspection of the most recent message or recent set of messages. Which allows us to detect outliers or anomalies but running complex analyses on the events.",
+                    "Subtitle": "detect outliers or anomalies",
+                    "Order": 3
                 }
-            ]
+            ],
+            "Title": "When To Use Kafka",
+            "Subtitle": "Most common and strong use cases"
+        },
+        {
+            "Key": "article_1628851880051",
+            "SectionHeight": "150px",
+            "Title": "When Not To Use Kafka",
+            "Subtitle": "use cases where of Apache Kafka can be a overkill",
+            "Order": 4,
+            "Color": "Pink",
+            "Sections": [{
+                    "Key": "section_1628851975266",
+                    "Color": "Pink",
+                    "Title": "Few Messages Per Day",
+                    "Content": "Kafka is designed to cope with the high load. We should make use of traditional message queues like RabbitMQ to process a small amount of (up to several thousand) messages per day as Kafka can be an overkill.",
+                    "Subtitle": "designed to cope with the high load",
+                    "Order": 0
+                },
+                {
+                    "Key": "section_1628852486888",
+                    "Color": "Pink",
+                    "Title": "Need Response",
+                    "Content": "Being a pub-sub (Publish-Subscribe) system Kafka does not offer the ability to provide acknowledgment back to the producer on message consumption by a consumer.",
+                    "Subtitle": "Publish-Subscribe system ",
+                    "Order": 1
+                },
+                {
+                    "Key": "section_1628852532815",
+                    "Color": "Pink",
+                    "Title": "Long-Term Storage",
+                    "Content": "Well, Kafka supports saving data during a specified retention period, but my recommendation is not to have this for too long as Kafka needs additional resources to manage a large amount of data.",
+                    "Subtitle": "needs additional resources",
+                    "Order": 2
+                },
+                {
+                    "Key": "section_1628852592294",
+                    "Color": "Pink",
+                    "Title": "Ordered Processing",
+                    "Subtitle": "requires a single consumer and single partition",
+                    "Content": "Ordered processing of all the messages requires a single consumer and single partition as Kafka does not support message ordering across partitions.",
+                    "Order": 3
+                }
+            ],
+            "Layout": "layout-2221"
         },
         {
             "Key": "article_1619514672237",

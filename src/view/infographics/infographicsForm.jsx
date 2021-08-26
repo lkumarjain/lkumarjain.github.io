@@ -4,7 +4,7 @@ import Dialog from '../common/dialog';
 import { Colors } from '../../components';
 
 import commonService from "../../services/common";
-import infograpicService from "../../services/infographic";
+import infograpicService from "../../services/infographics";
 
 const layouts = ['layout-4321', 'layout-3321', 'layout-3221', 'layout-2221', 'layout-2211', 'layout-2111', 'layout-1111'];
 const vArticle = "article";

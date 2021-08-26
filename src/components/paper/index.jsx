@@ -4,7 +4,7 @@ import { Colors } from "../../components";
 import './paper.css'
 
 export default function Paper(props) {
-    const { children, variant = "infographic", color = "Red", className, style = {},
+    const { children, variant = "infographics", color = "Red", className, style = {},
         title, subtitle, avatar, action, footer, ...rest } = props;
 
     return <article style={{ ...style, ...Colors[color] }}
@@ -29,7 +29,7 @@ export default function Paper(props) {
 Paper.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
-    variant: PropTypes.oneOf(['infographic', 'panel']),
+    variant: PropTypes.oneOf(['infographics', 'panel']),
     color: PropTypes.oneOf(Colors.Values),
     title: PropTypes.string,
     subtitle: PropTypes.string,

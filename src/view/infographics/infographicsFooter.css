@@ -1,5 +1,16 @@
 .jn-infographics-footer {
     display: block;
+    text-align: center;
+}
+
+.jn-infographics-footer .more-info {
+    text-align: right;
+    opacity: .7;
+}
+
+.jn-infographics-footer .copy-right {
+    text-align: left;
+    opacity: .7;
 }
 
 

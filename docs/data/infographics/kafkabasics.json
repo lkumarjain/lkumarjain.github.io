@@ -3,7 +3,6 @@
     "Title": "Apache Kafka",
     "Subtitle": "An open-source distributed event streaming platform",
     "Avatar": "/img/logo/kafka.png",
-    "Footer": "https://lkumarjain.blogspot.com/",
     "Color": "Red",
     "Articles": [{
             "Key": "article_1619513323561",

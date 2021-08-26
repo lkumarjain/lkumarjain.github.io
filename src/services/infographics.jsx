@@ -1,4 +1,4 @@
-const InfograpicService = {
+const InfographicsService = {
     Sort: (record) => {
         if (record.Articles) { record.Articles.sort((a, b) => (a.Order - b.Order)) }
         return record;
@@ -66,4 +66,4 @@ const InfograpicService = {
     },
 }
 
-export default InfograpicService;
+export default InfographicsService;

@@ -12,15 +12,15 @@ export default function Layout(props) {
             <div className="layout-page">
                 <div className="layout-page-header">
                     <div className="logo">
-                        <a className="layout-page-title" href="/">Jain's Tech World</a>
-                        <p className="layout-page-sub-title">Technology Ideas and Solutions</p>
+                        <a className="layout-page-title" href="/">{config.Title}</a>
+                        <p className="layout-page-sub-title">{config.TagLine}</p>
                     </div>
                     <Social />
                 </div>
                 <div className="layout-page-nav">
-                    <Nav title="Jain's Tech World" subtitle="Technology Ideas and Solutions" variant="navbar" color="Grey" elevated={false}>
+                    <Nav title={config.Title} subtitle={config.TagLine} variant="navbar" color="Grey" elevated={false}>
                         {/* <NavItem variant="item"><Social /></NavItem> */}
-                        {config && config.Navigations.map((navigation, index) =>
+                        {config.Navigation && config.Navigation.map((navigation, index) =>
                             <Navigation key={index} value={navigation} />
                         )}
                     </Nav>
