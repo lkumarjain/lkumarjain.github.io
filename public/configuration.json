@@ -27,6 +27,12 @@
                 {
                     "Variant": "link",
                     "Icon": "Default",
+                    "To": "/infographics/cache",
+                    "Label": "Cache"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
                     "To": "/gallery/gomod",
                     "Label": "Go Module"
                 }
