@@ -21,6 +21,12 @@
                 {
                     "Variant": "link",
                     "Icon": "Default",
+                    "To": "/infographics/cache",
+                    "Label": "Cache"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
                     "To": "/infographics/elasticsearch",
                     "Label": "Elastic Search"
                 },
