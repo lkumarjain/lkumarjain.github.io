@@ -7,6 +7,7 @@ import Home from './view/home';
 import { Infographics } from './view/infographics';
 import { Gallery } from './view/gallery';
 import Playground from './view/playground';
+import CodeSnap from './view/codesnap';
 
 export default function Application(props) {
     const [config, setConfig] = React.useState([]);
@@ -66,5 +67,6 @@ function RouteGenerator(props) {
         <Route exact path="/components/:key" children={<ComponentHandler />} />
         <Route exact path="/gallery/:key" children={<GalleryHandler />} />
         <Route path="/infographics/:key" children={<InfographicsHandler config={config} />} />
+        <Route path="/codesnippet" children={<CodeSnap />} />
     </Switch>;
 }

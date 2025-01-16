@@ -1,4 +1,35 @@
+import domtoimage from 'dom-to-image-more';
+
 const CommonService = {
+    Download: function (blob, fileName) {
+        let element = document.createElement('a');
+        element.setAttribute('href', blob);
+        element.setAttribute('download', fileName);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+    },
+
+    GenerateSnapshot: async function (node, scale) {
+        const style = {
+            transform: 'scale(' + scale + ')',
+            transformOrigin: 'top left',
+            width: (node.offsetWidth) + "px",
+            height: node.offsetHeight + "px",
+        }
+
+        const param = {
+            height: node.offsetHeight * scale,
+            width: (node.offsetWidth) * scale,
+            quality: 1,
+            style
+        }
+
+        const base64Image = await domtoimage.toPng(node, param)
+        return base64Image;
+    },
+
     Stringify: (record) => {
         return JSON.stringify(record, (key, value) => {
             return ['', null].includes(value)
@@ -27,7 +58,7 @@ const CommonService = {
         delete result[key];
         if (value !== '' && value !== 0) { result[key] = value; }
         return data;
-    },
+    }
 }
 
 export default CommonService;

@@ -79,6 +79,12 @@
                     "Label": "Timeline"
                 }
             ]
+        },
+        {
+            "To": "/codesnippet",
+            "Label": "Code Snap",
+            "Variant": "link",
+            "Icon": "Code"
         }
     ]
 }
