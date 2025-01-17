@@ -1,4 +1,4 @@
-import { PhotoCamera, ImportContacts, Info, Home, Note, Receipt, Settings, Code } from "@material-ui/icons";
+import { PhotoCamera, ImportContacts, Info, Home, Note, Receipt, Settings, Code } from "@mui/icons-material";
 
 const Icons = {
     "Home": <Home />,

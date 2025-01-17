@@ -1,7 +1,7 @@
 import React from 'react';
-import MuiDialog from '@material-ui/core/Dialog';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
+import MuiDialog from '@mui/material/Dialog';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import { Paper } from '../../../components';
 
 export default function Dialog(props) {

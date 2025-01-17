@@ -1,5 +1,5 @@
 import React from "react";
-import { Home } from "@material-ui/icons";
+import { Home } from "@mui/icons-material";
 import { Nav, NavItem } from '../../components';
 import Example from './example';
 

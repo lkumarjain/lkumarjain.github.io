@@ -1,7 +1,7 @@
 import React from "react";
 import Example from './example';
 import { Figure } from '../../components'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 export default function FigureExample(props) {
     return <Example label="Figure Component" variant="h6" divider>

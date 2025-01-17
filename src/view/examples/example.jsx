@@ -1,4 +1,4 @@
-import { Divider, Typography } from "@material-ui/core";
+import { Divider, Typography } from "@mui/material";
 
 export default function Example(props) {
     const { label, variant = "body1", divider = false, children } = props;

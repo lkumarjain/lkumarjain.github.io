@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, useParams, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams, useLocation } from "react-router-dom";
 import Layout from './view/common/layout';
 
 import Components from './view/components';
@@ -61,12 +61,12 @@ function ComponentHandler() {
 
 function RouteGenerator(props) {
     const { config } = props;
-    return <Switch>
-        <Route exact path="/" children={<Home config={config} />} />
-        <Route exact path="/playground" children={<Playground />} />
-        <Route exact path="/components/:key" children={<ComponentHandler />} />
-        <Route exact path="/gallery/:key" children={<GalleryHandler />} />
-        <Route path="/infographics/:key" children={<InfographicsHandler config={config} />} />
-        <Route path="/codesnippet" children={<CodeSnap />} />
-    </Switch>;
+    return <Routes>
+        <Route exact path="/" element={<Home config={config} />} />
+        <Route exact path="/playground" element={<Playground />} />
+        <Route exact path="/components/:key" element={<ComponentHandler />} />
+        <Route exact path="/gallery/:key" element={<GalleryHandler />} />
+        <Route path="/infographics/:key" element={<InfographicsHandler config={config} />} />
+        <Route path="/codesnippet" element={<CodeSnap />} />
+    </Routes>;
 }

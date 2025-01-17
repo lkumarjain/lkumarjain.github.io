@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, DialogActions, Grid, MenuItem, TextField } from '@material-ui/core';
+import { Button, DialogActions, Grid, MenuItem, TextField } from '@mui/material';
 import Dialog from '../common/dialog';
 import { Colors } from '../../components';
 

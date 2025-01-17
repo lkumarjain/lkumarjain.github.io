@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Paper, Timeline, TimelineItem } from "../../components";
-import { IconButton, MenuList, Popover } from "@material-ui/core";
-import { SettingsSharp } from "@material-ui/icons";
+import { IconButton, MenuList, Popover } from "@mui/material";
+import { SettingsSharp } from "@mui/icons-material";
 import InfographicsForm from './infographicsForm';
 
 import CommonService from "../../services/common";

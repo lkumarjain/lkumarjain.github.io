@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Divider, Paper } from '@material-ui/core';
+import { Paper } from '@mui/material';
 import CodeMirror from '@uiw/react-codemirror';
 import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 import Themes from './theme';
@@ -8,14 +8,17 @@ import "./index.css";
 
 export function Editor(props) {
     const { elevation = 12, themeName = "githubLight",
-        fileName = "Program", language = "go", fontSize = "20px",
+        fileName = "Program", language = "go", fontSize = "20px", fontWeight = 500,
         highlight = false, hasOutput = true } = props;
     const { theme, titleBar, titleText } = Themes[themeName];
 
-    console.log("Editor: ", titleText, " params: ", props, " theme: ", Themes);
+    console.log("Editor: ", titleText, " params: ", props, " theme: ", Themes, "Settings", theme);
     return (
         <>
-            <Paper elevation={elevation} style={{ paddingBottom: "10px ", borderRadius: "5px" }}>
+            <Paper elevation={elevation} style={{
+                borderRadius: "5px", background: titleText.backgroundColor,
+                border: ["5px solid", titleBar.backgroundColor].join(' ')
+            }}>
                 <div className="code-editor-title-bar" style={{ ...titleBar }}>
                     <div className="code-editor-title-buttons">
                         <div className="code-editor-title-button" />
@@ -29,18 +32,21 @@ export function Editor(props) {
                 </div>
                 <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage(language)]}
                     basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
-                    style={{ fontSize: fontSize }} />
+                    style={{ fontSize: fontSize, fontWeight: fontWeight }} />
             </Paper>
 
             {hasOutput &&
-                <Paper elevation={elevation} style={{ paddingBottom: "10px ", borderRadius: "5px", margin: "10px auto 0px auto", width: "80%" }}>
-                    <div className="code-editor-output-title-text" style={{ ...titleText }}>
+                <Paper elevation={elevation} sx={{
+                    borderRadius: "5px", margin: "10px auto 0px auto", width: "80%",
+                    background: titleText.backgroundColor,
+                    border: ["5px solid", titleBar.backgroundColor].join(' ')
+                }}>
+                    <div className="code-editor-output-title-text" style={{ ...titleText, ...titleBar }}>
                         <span contentEditable>Output</span>
                     </div>
-                    <Divider />
                     <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage('shell')]}
                         basicSetup={{ highlightActiveLine: false, highlightActiveLineGutter: false }}
-                        style={{ fontSize: fontSize }} />
+                        style={{ fontSize: fontSize, fontWeight: fontWeight }} />
                 </Paper>
             }
         </>

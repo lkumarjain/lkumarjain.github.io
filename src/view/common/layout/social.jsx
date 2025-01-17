@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, GitHub, LinkedIn, Public } from '@material-ui/icons';
+import { Facebook, GitHub, LinkedIn, Public } from '@mui/icons-material';
 import './social.css';
 
 export default function Social(props) {

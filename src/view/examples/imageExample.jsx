@@ -1,7 +1,7 @@
 import React from "react";
 import Example from './example';
 import { Image } from '../../components'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 const patterns = ['', 'bevel', 'circle', 'decagon', 'ellipse', 'heptagon', 'hexagon', 'message', 'nonagon', 'octagon', 'parallelogram', 'pentagon', 'rabbet', 'rhombus'];
 
