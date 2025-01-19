@@ -6,6 +6,7 @@ import { Editor } from '../editor';
 import CommonService from '../../../services/common';
 import Themes from '../editor/theme';
 import { ActionPopover } from '../../popover';
+import { Picker } from '../../colors/picker';
 
 export function Snap(props) {
     const reference = React.useRef(null);
@@ -34,16 +35,12 @@ export function Snap(props) {
         setRecord({ ...record, Width: newValue });
     }
 
-    function handleColorComplete(color) {
-        setRecord({ ...record, Background: color.hex });
-    }
-
     return (
         <>
             <Paper elevation={6} style={{ padding: "20px", margin: "10px auto", width: "80%" }}>
                 <Grid2 container spacing={2}>
                     <Grid2 item size={8}>
-                        <Options record={record} handleChange={handleChange} handleColorComplete={handleColorComplete} />
+                        <Options record={record} setRecord={setRecord} handleChange={handleChange} />
                     </Grid2>
                     <Grid2 item size={4}>
                         <Right onExport={onExport} />
@@ -96,7 +93,7 @@ export function Snap(props) {
 }
 
 function Options(props) {
-    const { record, handleChange, handleColorComplete } = props;
+    const { record, setRecord, handleChange } = props;
     return (
         <Grid2 container spacing={2}>
             <Grid2 item size={4}>
@@ -116,7 +113,7 @@ function Options(props) {
             <Grid2 item size={2}>
                 <Stack direction="row" spacing={0.5}>
                     <ActionPopover name="color-picker" icon={<FormatColorFill />} background={record.Background}>
-                        <SketchPicker color={record.Background} onChangeComplete={handleColorComplete} />
+                        <Picker record={record} setRecord={setRecord} handleChange={handleChange} />
                     </ActionPopover>
                     <ActionPopover name="Settings" icon={<Settings />} background={record.Background}>
 
