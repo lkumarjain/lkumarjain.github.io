@@ -1,0 +1,9 @@
+.jn-color-circle {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.jn-color-circle:hover {
+    scale: 1.2;
+}

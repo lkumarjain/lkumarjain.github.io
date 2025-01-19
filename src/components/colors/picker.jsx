@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Button, Paper, Stack, Tab, Tabs, TextField } from '@mui/material';
-import { CirclePicker } from 'react-color'
+import { Box, FormControlLabel, Paper, Slider, Stack, Tab, Tabs, TextField, Typography } from '@mui/material';
 import colors from '.';
 import "./picker.css";
 
@@ -21,7 +20,7 @@ export function Picker(props) {
 
 
     return (
-        <Paper elevation={6} style={{ padding: "20px", width: "250px" }}>
+        <Paper elevation={6} style={{ padding: "20px", width: "200px" }}>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
                 <Tabs value={options.ColorType} onChange={handleTabChange}>
                     <Tab label="Solid" value="SOLID" />
@@ -38,17 +37,26 @@ export function Picker(props) {
 }
 
 function Solid(props) {
-    const { selected, onSelect } = props;
+    const { onSelect } = props;
+    const [scale, setScale] = React.useState(700);
+
+    const marks = [
+        { value: 5, }, { value: 10, }, { value: 20, }, { value: 30, },
+        { value: 40, }, { value: 50, }, { value: 60, }, { value: 70, },
+        { value: 80, }, { value: 90, }, { value: 100, },
+    ];
+
+    const scaleKey = ["--C", scale].join('')
+
     return (
-        <Stack spacing={2} direction="row" useFlexGap
-            sx={{ flexWrap: 'wrap', paddingTop: "20px" }}>
+        <Stack spacing={2} direction="row" useFlexGap sx={{ flexWrap: 'wrap', paddingTop: "10px" }}>
+            <Typography variant="subtitle1">Scale</Typography>
+            <Slider step={null} valueLabelDisplay="auto" marks={marks} />
             {colors.Values.map((color, i) => (
-                <Paper elevation={1} onClick={(event) => onSelect(colors[color]["--C700"], false)}
-                    sx={{
-                        width: "25px", height: "25px", borderRadius: "50%",
-                        background: colors[color]["--C700"],
-                    }} />
+                <Paper elevation={1} onClick={(event) => onSelect(colors[color][scaleKey], false)}
+                    className='jn-color-circle' sx={{ background: colors[color][scaleKey], }} />
             ))}
-        </Stack>
+
+        </Stack >
     );
 }
