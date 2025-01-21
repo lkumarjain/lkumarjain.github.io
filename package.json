@@ -4,7 +4,12 @@
   "private": true,
   "main": "index.jsx",
   "dependencies": {
+    "@fontsource/fira-code": "^5.1.1",
+    "@fontsource/jetbrains-mono": "^5.1.2",
     "@fontsource/roboto": "^5.1.1",
+    "@fontsource/source-code-pro": "^5.1.1",
+    "@fontsource/ubuntu-mono": "^5.1.1",
+    "@fontsource/victor-mono": "^5.1.1",
     "@mui/icons-material": "^6.4.0",
     "@mui/material": "^6.4.0",
     "@uiw/codemirror-extensions-basic-setup": "^4.23.7",

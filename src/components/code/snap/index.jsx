@@ -1,19 +1,21 @@
 import React from 'react';
 import { Box, Button, Grid2, MenuItem, Paper, Slider, Stack, TextField, Typography } from '@mui/material';
 import { Camera, FormatColorFill, Settings } from '@mui/icons-material';
-import { SketchPicker } from 'react-color'
 import { Editor } from '../editor';
 import CommonService from '../../../services/common';
 import Themes from '../editor/theme';
 import { ActionPopover } from '../../popover';
 import { Picker } from '../../colors/picker';
+import { SettingsForm } from './settingsform';
+import FontFamily from '../editor/font';
 
 export function Snap(props) {
     const reference = React.useRef(null);
     const [record, setRecord] = React.useState(
         {
-            Width: 50, FontSize: "20px", Scale: 4, ThemeName: "githubLight", Language: "go",
-            Background: "#808080"
+            Width: 50, FontSize: "20px", FontWeight: 500, FontFamily: FontFamily.Default,
+            Scale: 4, ThemeName: Themes.Default, Language: "go",
+            Background: Themes[Themes.Default].background
         });
 
     const { fileName = "Program" } = props;
@@ -51,41 +53,15 @@ export function Snap(props) {
                 </Grid2>
             </Paper>
 
-            {/* <Grid2 container spacing={2}>
-                <Grid2 item size={2}>
-                    <TextField fullWidth required select size="small" name="FontSize" label="Font Size" variant="outlined"
-                        value={record.FontSize} onChange={handleChange}>
-                        <MenuItem value="12px">12</MenuItem>
-                        <MenuItem value="14px">14</MenuItem>
-                        <MenuItem value="16px">16</MenuItem>
-                        <MenuItem value="18px">18</MenuItem>
-                        <MenuItem value="20px">20</MenuItem>
-                        <MenuItem value="22px">22</MenuItem>
-                        <MenuItem value="24px">24</MenuItem>
-                    </TextField>
-                </Grid2>
-                <Grid2 item size={2}>
-                    <TextField fullWidth required select size="small" name="Scale" label="Scale" variant="outlined"
-                        value={record.Scale} onChange={handleChange}>
-                        <MenuItem value={1}>1</MenuItem>
-                        <MenuItem value={2}>2</MenuItem>
-                        <MenuItem value={3}>3</MenuItem>
-                        <MenuItem value={4}>4</MenuItem>
-                        <MenuItem value={5}>5</MenuItem>
-                        <MenuItem value={6}>6</MenuItem>
-                    </TextField>
-                </Grid2>
-            </Grid2> */}
-
             <Box>
                 <Typography>Window Width</Typography>
                 <Slider value={record.Width} valueLabelDisplay="on" color="primary" min={30} max={100}
                     size="medium" onChange={handleSliderChange} />
             </Box>
             <Paper elevation={0} square style={{ margin: "0px auto", width: record.Width + "%" }}>
-                <Paper ref={reference} elevation={0} square style={{ padding: "10px", backgroundColor: record.Background }}>
-                    <Editor fileName={fileName} fontSize={record.FontSize} themeName={record.ThemeName}
-                        language={record.Language} />
+                <Paper ref={reference} elevation={0} square style={{ padding: "10px", background: record.Background }}>
+                    <Editor fileName={fileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
+                        themeName={record.ThemeName} language={record.Language} />
                 </Paper>
             </Paper>
         </>
@@ -93,7 +69,7 @@ export function Snap(props) {
 }
 
 function Options(props) {
-    const { record, setRecord, handleChange } = props;
+    const { record, handleChange } = props;
     return (
         <Grid2 container spacing={2}>
             <Grid2 item size={4}>
@@ -113,10 +89,10 @@ function Options(props) {
             <Grid2 item size={2}>
                 <Stack direction="row" spacing={0.5}>
                     <ActionPopover name="color-picker" icon={<FormatColorFill />} background={record.Background}>
-                        <Picker record={record} setRecord={setRecord} handleChange={handleChange} />
+                        <Picker name="Background" value={record.Background} handleChange={handleChange} />
                     </ActionPopover>
                     <ActionPopover name="Settings" icon={<Settings />} background={record.Background}>
-
+                        <SettingsForm record={record} handleChange={handleChange} />
                     </ActionPopover>
                 </Stack>
             </Grid2>

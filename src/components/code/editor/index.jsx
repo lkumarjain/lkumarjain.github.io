@@ -3,12 +3,13 @@ import { Paper } from '@mui/material';
 import CodeMirror from '@uiw/react-codemirror';
 import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 import Themes from './theme';
+import FontFamily from './font';
 
 import "./index.css";
 
 export function Editor(props) {
-    const { elevation = 12, themeName = "githubLight",
-        fileName = "Program", language = "go", fontSize = "20px", fontWeight = 500,
+    const { elevation = 12, themeName = Themes.Default,
+        fileName = "Program", language = "go", fontSize = "20px", fontWeight = 500, fontFamily = FontFamily.Default,
         highlight = false, hasOutput = true } = props;
     const { theme, titleBar, titleText } = Themes[themeName];
 
@@ -32,7 +33,7 @@ export function Editor(props) {
                 </div>
                 <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage(language)]}
                     basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
-                    style={{ fontSize: fontSize, fontWeight: fontWeight }} />
+                    style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
             </Paper>
 
             {hasOutput &&
@@ -45,8 +46,8 @@ export function Editor(props) {
                         <span contentEditable>Output</span>
                     </div>
                     <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage('shell')]}
-                        basicSetup={{ highlightActiveLine: false, highlightActiveLineGutter: false }}
-                        style={{ fontSize: fontSize, fontWeight: fontWeight }} />
+                        basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
+                        style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
                 </Paper>
             }
         </>
@@ -59,6 +60,7 @@ Editor.propTypes = {
     fileName: PropTypes.string,
     language: PropTypes.string.isRequired,
     fontSize: PropTypes.string,
+    fontWeight: PropTypes.number,
     highlight: PropTypes.bool,
     hasOutput: PropTypes.bool,
 };
