@@ -3,48 +3,38 @@ import { Paper } from '@mui/material';
 import CodeMirror from '@uiw/react-codemirror';
 import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 import Themes from './theme';
-import FontFamily from './font';
+import FontFamily from './fontfamily';
+import Languages from './languages';
 
 import "./index.css";
+import { Title } from './title';
 
 export function Editor(props) {
     const { elevation = 12, themeName = Themes.Default,
-        fileName = "Program", language = "go", fontSize = "20px", fontWeight = 500, fontFamily = FontFamily.Default,
-        highlight = false, hasOutput = true } = props;
+        fileName = "Program", language = Languages.Default, fontSize = "20px", fontWeight = 500, fontFamily = FontFamily.Default,
+        highlight = false, showResult = true } = props;
     const { theme, titleBar, titleText } = Themes[themeName];
 
-    console.log("Editor: ", titleText, " params: ", props, " theme: ", Themes, "Settings", theme);
+    console.log("Editor: ", titleText, " params: ", props, " theme: ", Themes, "Settings", theme, language, Languages[language]);
     return (
         <>
             <Paper elevation={elevation} style={{
                 borderRadius: "5px", background: titleText.backgroundColor,
                 border: ["5px solid", titleBar.backgroundColor].join(' ')
             }}>
-                <div className="code-editor-title-bar" style={{ ...titleBar }}>
-                    <div className="code-editor-title-buttons">
-                        <div className="code-editor-title-button" />
-                        <div className="code-editor-title-button" />
-                        <div className="code-editor-title-button" />
-                    </div>
-                    <p className="code-editor-title-text" style={{ ...titleText }}>
-                        {/* <img src={language.image} alt="" className="code-editor-language-icon" /> */}
-                        <span contentEditable>{[fileName, language].join('.')}</span>
-                    </p>
-                </div>
-                <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage(language)]}
+                <Title themeName={themeName} fileName={fileName} language={language} />
+                <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage(Languages[language].name)]}
                     basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
                     style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
             </Paper>
 
-            {hasOutput &&
+            {showResult &&
                 <Paper elevation={elevation} sx={{
                     borderRadius: "5px", margin: "10px auto 0px auto", width: "80%",
                     background: titleText.backgroundColor,
                     border: ["5px solid", titleBar.backgroundColor].join(' ')
                 }}>
-                    <div className="code-editor-output-title-text" style={{ ...titleText, ...titleBar }}>
-                        <span contentEditable>Output</span>
-                    </div>
+                    <Title variant="result" themeName={themeName} language="Shell" />
                     <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage('shell')]}
                         basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
                         style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
@@ -62,5 +52,5 @@ Editor.propTypes = {
     fontSize: PropTypes.string,
     fontWeight: PropTypes.number,
     highlight: PropTypes.bool,
-    hasOutput: PropTypes.bool,
+    showResult: PropTypes.bool,
 };

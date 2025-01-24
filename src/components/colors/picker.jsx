@@ -20,7 +20,7 @@ export function Picker(props) {
     return (
         <Paper elevation={6} style={{ padding: "20px", width: "260px" }}>
             <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-                <Tabs value={record.ColorType} onChange={handleTabChange}>
+                <Tabs variant="fullWidth" value={record.ColorType} onChange={handleTabChange}>
                     <Tab label="Solid" value="SOLID" />
                     <Tab label="Gradient" value="GRADIENT" />
                 </Tabs>
