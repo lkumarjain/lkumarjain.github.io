@@ -10,6 +10,7 @@ import { Picker } from '../../colors/picker';
 import { SettingsForm } from './settingsform';
 import FontFamily from '../editor/fontfamily';
 import Languages from '../editor/languages';
+import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 
 export function Snap(props) {
     const { fileName = "Program" } = props;
@@ -53,20 +54,21 @@ export function Snap(props) {
                 </Grid2>
             </Paper>
 
-            <Box style={{ paddingTop: "10px" }}>
-                <Typography>Frame Width</Typography>
-                <Slider value={record.Width} valueLabelDisplay="on" color="primary" min={30} max={100}
-                    size="medium" onChange={(event, value) => handleAttributeChange("Width", value)} />
-            </Box>
-            <Paper elevation={0} square style={{ margin: "0px auto", width: record.Width + "%" }}>
-                <Paper ref={reference} elevation={0} style={{
-                    padding: "10px", background: record.Background,
-                    boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
-                }}>
-                    <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
-                        themeName={record.ThemeName} language={record.Language} highlight={record.Highlight} showResult={record.ShowResult} />
-                </Paper>
-            </Paper>
+            <PanelGroup direction="horizontal">
+                <Panel defaultSize={15} order={1} collapsible={true} />
+                <PanelResizeHandle style={{ padding: "5px", background: "#000" }} />
+                <Panel defaultSize={70} minSize={30} order={2}>
+                    <Paper ref={reference} elevation={0} style={{
+                        padding: "10px", background: record.Background,
+                        boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
+                    }}>
+                        <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
+                            themeName={record.ThemeName} language={record.Language} highlight={record.Highlight} showResult={record.ShowResult} />
+                    </Paper>
+                </Panel>
+                <PanelResizeHandle />
+                <Panel defaultSize={15} order={3} collapsible={true} />
+            </PanelGroup>
         </>
     );
 }
