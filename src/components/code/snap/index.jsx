@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Box, Grid2, MenuItem, Paper, Slider, Stack, TextField, Typography } from '@mui/material';
+import { Avatar, Grid2, MenuItem, Paper, Stack, TextField } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import { Camera, FormatColorFill, Settings } from '@mui/icons-material';
 import { Editor } from '../editor';
@@ -10,7 +10,7 @@ import { Picker } from '../../colors/picker';
 import { SettingsForm } from './settingsform';
 import FontFamily from '../editor/fontfamily';
 import Languages from '../editor/languages';
-import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
+import { Resizable } from '../../resize';
 
 export function Snap(props) {
     const { fileName = "Program" } = props;
@@ -54,21 +54,15 @@ export function Snap(props) {
                 </Grid2>
             </Paper>
 
-            <PanelGroup direction="horizontal">
-                <Panel defaultSize={15} order={1} collapsible={true} />
-                <PanelResizeHandle style={{ padding: "5px", background: "#000" }} />
-                <Panel defaultSize={70} minSize={30} order={2}>
-                    <Paper ref={reference} elevation={0} style={{
-                        padding: "10px", background: record.Background,
-                        boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
-                    }}>
-                        <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
-                            themeName={record.ThemeName} language={record.Language} highlight={record.Highlight} showResult={record.ShowResult} />
-                    </Paper>
-                </Panel>
-                <PanelResizeHandle />
-                <Panel defaultSize={15} order={3} collapsible={true} />
-            </PanelGroup>
+            <Resizable>
+                <Paper ref={reference} elevation={0} style={{
+                    padding: "10px", background: record.Background,
+                    boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
+                }}>
+                    <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
+                        themeName={record.ThemeName} language={record.Language} highlight={record.Highlight} showResult={record.ShowResult} />
+                </Paper>
+            </Resizable>
         </>
     );
 }
