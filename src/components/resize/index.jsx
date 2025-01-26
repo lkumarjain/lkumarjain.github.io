@@ -1,5 +1,7 @@
 import React from "react";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import './index.css';
+import { TextField } from "@mui/material";
 
 export function Resizable(props) {
     const { children, direction = "horizontal", size = 70, background = "#000" } = props;
@@ -17,16 +19,29 @@ export function Resizable(props) {
                 onResize={(value) => onResize("left", value)}>
                 {sizes.left}%
             </Panel>
-            <PanelResizeHandle style={{ padding: "5px", background: background }} />
+            <ResizeHandle className="jn-resize-handle" />
             <Panel defaultSize={size} minSize={30} order={2}>
                 {children}
             </Panel>
-            <PanelResizeHandle style={{ padding: "5px", background: background }} />
+            <ResizeHandle className="jn-resize-handle" />
             <Panel defaultSize={sizes.right} order={3} collapsible={true}
                 style={{ textAlign: "center", alignContent: "center", }}
                 onResize={(value) => onResize("right", value)}>
                 {sizes.right}%
             </Panel>
         </PanelGroup>
+    );
+}
+
+function ResizeHandle(props) {
+    return (
+        <PanelResizeHandle className="jn-resize-handle">
+            <div className="jn-resize-handle-inner">
+                <svg className="jn-resize-handle-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M8,18H11V15H2V13H22V15H13V18H16L12,22L8,18M12,2L8,6H11V9H2V11H22V9H13V6H16L12,2Z" />
+                </svg>
+            </div>
+        </PanelResizeHandle>
     );
 }

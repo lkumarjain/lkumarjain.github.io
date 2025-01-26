@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Paper } from '@mui/material';
 import CodeMirror from '@uiw/react-codemirror';
+import { EditorView } from "@codemirror/view"
 import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 import Themes from './theme';
 import FontFamily from './fontfamily';
@@ -23,7 +24,8 @@ export function Editor(props) {
                 border: ["5px solid", titleBar.backgroundColor].join(' ')
             }}>
                 <Title themeName={themeName} fileName={fileName} language={language} />
-                <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage(Languages[language].name)]}
+                <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme}
+                    extensions={[loadLanguage(Languages[language].name), EditorView.lineWrapping]}
                     basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
                     style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
             </Paper>
