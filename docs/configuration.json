@@ -21,14 +21,14 @@
                 {
                     "Variant": "link",
                     "Icon": "Default",
-                    "To": "/infographics/cache",
-                    "Label": "Cache"
+                    "To": "/infographics/elasticsearch",
+                    "Label": "Elastic Search"
                 },
                 {
                     "Variant": "link",
                     "Icon": "Default",
-                    "To": "/infographics/elasticsearch",
-                    "Label": "Elastic Search"
+                    "To": "/infographics/cache",
+                    "Label": "Cache"
                 },
                 {
                     "Variant": "link",
@@ -79,6 +79,12 @@
                     "Label": "Timeline"
                 }
             ]
+        },
+        {
+            "To": "/codesnippet",
+            "Label": "Code Snap",
+            "Variant": "link",
+            "Icon": "Code"
         }
     ]
 }
