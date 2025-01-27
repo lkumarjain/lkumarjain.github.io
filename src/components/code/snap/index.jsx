@@ -10,7 +10,7 @@ import { Picker } from '../../colors/picker';
 import { SettingsForm } from './settingsform';
 import FontFamily from '../editor/fontfamily';
 import Languages from '../editor/languages';
-import { Resizable } from '../../resize';
+import { ResizePanel } from '../../resizepanel';
 
 export function Snap(props) {
     const { fileName = "Program" } = props;
@@ -18,7 +18,7 @@ export function Snap(props) {
     const reference = React.useRef(null);
     const [record, setRecord] = React.useState(
         {
-            Width: 70, FontSize: "20px", FontWeight: 500, FontFamily: FontFamily.Default,
+            Width: 70, FontSize: "18px", FontWeight: 500, FontFamily: FontFamily.Default,
             Scale: 4, ThemeName: Themes.Default, Language: Languages.Default, FileName: fileName,
             Background: Themes[Themes.Default].background, Highlight: false, ShowResult: true,
         });
@@ -54,7 +54,7 @@ export function Snap(props) {
                 </Grid2>
             </Paper>
 
-            <Resizable>
+            <ResizePanel>
                 <Paper ref={reference} elevation={0} style={{
                     padding: "10px", background: record.Background,
                     boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
@@ -62,7 +62,7 @@ export function Snap(props) {
                     <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
                         themeName={record.ThemeName} language={record.Language} highlight={record.Highlight} showResult={record.ShowResult} />
                 </Paper>
-            </Resizable>
+            </ResizePanel>
         </>
     );
 }

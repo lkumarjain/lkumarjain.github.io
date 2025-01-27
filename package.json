@@ -24,10 +24,10 @@
     "@uiw/react-codemirror": "^4.23.7",
     "devicons-react": "^1.4.0",
     "dom-to-image-more": "^3.5.0",
+    "re-resizable": "^6.10.3",
     "react": "^19.0.0",
     "react-color": "^2.19.3",
     "react-dom": "^19.0.0",
-    "react-resizable-panels": "^2.1.7",
     "react-router-dom": "^7.1.2",
     "react-scripts": "^5.0.1"
   },

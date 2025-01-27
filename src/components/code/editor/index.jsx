@@ -9,6 +9,7 @@ import Languages from './languages';
 
 import "./index.css";
 import { Title } from './title';
+import { ResizePanel } from '../../resizepanel';
 
 export function Editor(props) {
     const { elevation = 12, themeName = Themes.Default,
@@ -31,16 +32,17 @@ export function Editor(props) {
             </Paper>
 
             {showResult &&
-                <Paper elevation={elevation} sx={{
-                    borderRadius: "5px", margin: "10px auto 0px auto", width: "80%",
-                    background: titleText.backgroundColor,
-                    border: ["5px solid", titleBar.backgroundColor].join(' ')
-                }}>
-                    <Title variant="result" themeName={themeName} language="Shell" />
-                    <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage('shell')]}
-                        basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
-                        style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
-                </Paper>
+                <ResizePanel bounds="parent" minWidth="30%" width="80%" maxWidth="95%" height="auto">
+                    <Paper elevation={elevation} sx={{
+                        borderRadius: "5px", marginTop: "10px", background: titleText.backgroundColor,
+                        border: ["5px solid", titleBar.backgroundColor].join(' ')
+                    }}>
+                        <Title variant="result" themeName={themeName} language="Shell" />
+                        <CodeMirror value="console.log('hello world!');" height="auto" width="auto" theme={theme} extensions={[loadLanguage('shell')]}
+                            basicSetup={{ highlightActiveLine: highlight, highlightActiveLineGutter: highlight }}
+                            style={{ fontSize: fontSize, fontWeight: fontWeight, fontFamily: fontFamily }} />
+                    </Paper>
+                </ResizePanel>
             }
         </>
     )
