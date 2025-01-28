@@ -20,7 +20,8 @@ export function Snap(props) {
         {
             Width: 70, FontSize: "18px", FontWeight: 500, FontFamily: FontFamily.Default,
             Scale: 4, ThemeName: Themes.Default, Language: Languages.Default, FileName: fileName,
-            Background: Themes[Themes.Default].background, Highlight: false, ShowResult: true,
+            Background: Themes[Themes.Default].background, Transparent: false,
+            Highlight: false, ShowResult: true,
         });
 
 
@@ -56,7 +57,7 @@ export function Snap(props) {
 
             <ResizePanel>
                 <Paper ref={reference} elevation={0} style={{
-                    padding: "10px", background: record.Background,
+                    padding: "10px", background: record.Transparent ? "transparent" : record.Background,
                     boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
                 }}>
                     <Editor fileName={record.FileName} fontSize={record.FontSize} fontWeight={record.FontWeight} fontFamily={record.FontFamily}
