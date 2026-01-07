@@ -1,0 +1,190 @@
+{
+    "Key": "backofenvelope_infographics",
+    "Avatar": "/img/logo/backofenvelope.png",
+    "Color": "Red",
+    "Articles": [
+        {
+            "Key": "article_1619513323561",
+            "Color": "Purple",
+            "Layout": "layout-3321",
+            "Sections": [
+                {
+                    "Key": "article_1629513323562",
+                    "Color": "Purple",
+                    "Order": 0,
+                    "Title": "DAU",
+                    "Content": "Number of unique users interacting with the system each day. This metric helps determine overall system load and storage requirements.",
+                    "Subtitle": "Daily Active Users"
+                },
+                {
+                    "Key": "article_1619513412169",
+                    "Color": "Purple",
+                    "Order": 1,
+                    "Content": "Percentage of DAU active at the same time during peak periods. Critical for estimating peak traffic and capacity needs.",
+                    "Title": "Concurrent Users",
+                    "Subtitle": "Percentage of DAU"
+                },
+                {
+                    "Key": "article_1619513438198",
+                    "Color": "Purple",
+                    "Order": 2,
+                    "Content": "Ratio of peak load to average load (e.g., 5× or 10×). Ensures the system can handle sudden traffic surges.",
+                    "Subtitle": "Traffic Spikes",
+                    "Title": "Peak Factor"
+                },
+                {
+                    "Key": "article_1619513513128",
+                    "Color": "Purple",
+                    "Order": 3,
+                    "Content": "Average and peak requests processed by the system per second, derived from total daily requests. Essential for sizing compute resources.",
+                    "Title": "RPS",
+                    "Subtitle": "Requests per Second"
+                },
+                {
+                    "Key": "article_1619513622472",
+                    "Color": "Purple",
+                    "Order": 4,
+                    "Subtitle": "Read/Write Ratio",
+                    "Content": "Proportion of read operations versus write operations. Influences database design and caching strategies.",
+                    "Title": "R/W Ratio"
+                },
+                {
+                    "Key": "article_1619513675278",
+                    "Color": "Purple",
+                    "Order": 5,
+                    "Subtitle": "Cache Hit Ratio",
+                    "Title": "Hit Ratio",
+                    "Content": "Percentage of requests served from cache. Higher ratios reduce database load and improve response times."
+                }
+            ],
+            "Footer": "Architect Tip: Always add 30–50% headroom for unexpected spikes",
+            "Title": "Traffic Assumptions",
+            "Subtitle": "Define traffic early to shape accurate capacity and scalable design",
+            "SectionHeight": "100px"
+        },
+        {
+            "Key": "article_1619513756954",
+            "Color": "Indigo",
+            "Order": 6,
+            "SectionHeight": "150px",
+            "Layout": "layout-3321",
+            "Sections": [
+                {
+                    "Key": "article_1619513925607",
+                    "Order": 7,
+                    "Color": "Indigo",
+                    "Content": "Average size of incoming requests to estimate network and processing overhead, and size of outgoing responses to determine bandwidth and CDN requirements.",
+                    "Title": "Payload",
+                    "Subtitle": "Size in KB"
+                },
+                {
+                    "Key": "article_1619514009952",
+                    "Type": "article",
+                    "Color": "Indigo",
+                    "Order": 8,
+                    "Content": "Performance SLA for 95% of requests to guide architecture and optimization, including expected contribution of each layer (Network, App, DB, Cache) to identify bottlenecks.",
+                    "Title": "Latency",
+                    "Subtitle": "SLA in MS"
+                },
+                {
+                    "Key": "article_1619514113512",
+                    "Color": "Indigo",
+                    "Order": 9,
+                    "Content": "CPU time per request on a single core to calculate RPS per core and server count, along with a headroom factor (e.g., 60%) to prevent overload during spikes.",
+                    "Title": "Compute",
+                    "Subtitle": "Compute Latency"
+                },
+                {
+                    "Key": "article_1619514191818",
+                    "Color": "Indigo",
+                    "Order": 10,
+                    "Content": "Average data per user (profile, logs, media) to determine total storage and database size, retention window to estimate storage growth and cost, and replication factor for fault tolerance which multiplies storage requirements.",
+                    "Title": "Storage",
+                    "Subtitle": "Data Size"
+                },
+                {
+                    "Key": "article_1619514246338",
+                    "Color": "Indigo",
+                    "Order": 11,
+                    "Content": "Expected increase in traffic and data per month to plan scaling and cost projections.",
+                    "Title": "Growth",
+                    "Subtitle": "Monthly Growth Rate %"
+                },
+                {
+                    "Key": "article_1619514325614",
+                    "Color": "Indigo",
+                    "Order": 12,
+                    "Content": "Compute cost per instance for budgeting, storage cost per GB factoring retention and replication, and bandwidth cost per GB for data transfer in/out, critical for high-volume systems.",
+                    "Title": "Cost",
+                    "Subtitle": " $$"
+                }
+            ],
+            "Subtitle": "The Foundation for Capacity Estimation",
+            "Footer": "Architect Tip: Account for Regional Variability and Plan for Growth, Not Just Today.",
+            "Title": "Additional Assumptions"
+        },
+        {
+            "Key": "article_1619514445488",
+            "Order": 13,
+            "Sections": [
+                {
+                    "Key": "article_1619514536959",
+                    "Order": 14,
+                    "Title": "Average RPS",
+                    "Content": "Requests per Day ÷ 86,400",
+                    "Color": "BlueGrey"
+                },
+                {
+                    "Key": "article_1619514599918",
+                    "Order": 15,
+                    "Title": "Peak RPS",
+                    "Content": "Average RPS × Peak Factor",
+                    "Color": "BlueGrey"
+                },
+                {
+                    "Key": "section_1628851758876",
+                    "Order": 2,
+                    "Title": "Bandwidth",
+                    "Content": "Peak RPS × Response Size × 8 (bits/sec)",
+                    "Color": "BlueGrey"
+                },
+                {
+                    "Key": "section_1628851805332",
+                    "Order": 3,
+                    "Title": "RPS per Core",
+                    "Content": "1000 ÷ CPU ms per request",
+                    "Color": "BlueGrey"
+                },
+                {
+                    "Key": "section_1767783687117",
+                    "Color": "BlueGrey",
+                    "Title": "Servers Needed",
+                    "Content": "Peak RPS ÷ (RPS per server × Headroom)\n",
+                    "Order": 4
+                },
+                {
+                    "Key": "section_1767783718844",
+                    "Color": "BlueGrey",
+                    "Title": "DB QPS",
+                    "Content": "Peak RPS × (1 − Cache Hit Ratio)\n",
+                    "Order": 5
+                },
+                {
+                    "Key": "section_1767783769939",
+                    "Color": "BlueGrey",
+                    "Content": "Users × Data per User × Replication Factor",
+                    "Title": "Total Storage",
+                    "Order": 6
+                }
+            ],
+            "Color": "BlueGrey",
+            "Layout": "layout-3221",
+            "Footer": "Architect Tip: Include Safety Margins and Use Worst-Case Scenarios for Critical Components",
+            "Title": "Calculations",
+            "Subtitle": "Use the defined assumptions to derive estimates for capacity planning",
+            "SectionHeight": "70px"
+        }
+    ],
+    "Title": "Quick Math for Big Systems",
+    "Subtitle": "Back of the Envelope: A Shortcut to Scalable Architecture"
+}
