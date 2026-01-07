@@ -21,14 +21,20 @@
                 {
                     "Variant": "link",
                     "Icon": "Default",
-                    "To": "/infographics/elasticsearch",
-                    "Label": "Elastic Search"
+                    "To": "/infographics/backofenvelope",
+                    "Label": "Back Of Envelope"
                 },
                 {
                     "Variant": "link",
                     "Icon": "Default",
                     "To": "/infographics/cache",
                     "Label": "Cache"
+                },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/infographics/elasticsearch",
+                    "Label": "Elastic Search"
                 },
                 {
                     "Variant": "link",
