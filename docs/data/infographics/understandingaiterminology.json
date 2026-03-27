@@ -1,0 +1,202 @@
+{
+    "Key": "understanding_ai_infographics",
+    "Color": "Red",
+    "Articles": [
+        {
+            "Key": "article_1619513323561",
+            "Color": "Purple",
+            "Sections": [
+                {
+                    "Key": "article_1629513323562",
+                    "Color": "Purple",
+                    "Order": 0,
+                    "Content": "AI is just the marketing umbrella. It covers anything that mimics human decision-making. In an architecture review, saying “we need AI” is too vague to be actionable. You have to dig deeper.",
+                    "Title": "AI",
+                    "Subtitle": "Artificial Intelligence"
+                },
+                {
+                    "Key": "article_1619513412169",
+                    "Color": "Purple",
+                    "Order": 1,
+                    "Subtitle": "Machine Learning",
+                    "Title": "ML",
+                    "Content": "ML systems learn statistical patterns from data. Classic ML still powers the real money-makers in our industry—fraud scoring, recommendations, pricing engines. It's cheaper, stable, and predictable."
+                },
+                {
+                    "Key": "article_1619513438198",
+                    "Color": "Purple",
+                    "Order": 2,
+                    "Title": "NLP",
+                    "Subtitle": "Natural Language Processing",
+                    "Content": "Don't sleep on classic NLP. Before LLMs, we used linguistic rules, sentiment analysis, and specialized models. Many enterprise pipelines still run on old-fashioned NLP because it's deterministic than a massive LLM."
+                },
+                {
+                    "Key": "article_1619513513128",
+                    "Color": "Purple",
+                    "Order": 3,
+                    "Subtitle": "Deep Learning",
+                    "Title": "DL",
+                    "Content": "This is the engine behind modern image recognition and natural language breakthroughs. But it brings heavy baggage: massive GPU constraints, sprawling model sizes, and painful tuning cycles."
+                }
+            ],
+            "SectionHeight": "100px",
+            "Subtitle": "Core AI Concepts",
+            "Title": "The Foundation",
+            "Avatar": "/img/ai/foundation.png",
+            "Footer": "Architect Tip: They are not interchangeable, though they often get used that way",
+            "Layout": "layout-2221"
+        },
+        {
+            "Key": "article_1619513756954",
+            "Order": 6,
+            "Sections": [
+                {
+                    "Key": "article_1619513925607",
+                    "Order": 7,
+                    "Color": "Green",
+                    "Subtitle": "Generative AI",
+                    "Title": "Gen AI",
+                    "Content": "These models create text, images, audio, or video. The trade-off? Generative systems amplify both creativity and risk. If you don't have heavy guardrails, you're asking for trouble."
+                },
+                {
+                    "Key": "article_1619514009952",
+                    "Type": "article",
+                    "Order": 8,
+                    "Color": "Green",
+                    "Subtitle": "Large Language Models",
+                    "Title": "LLMs",
+                    "Content": "LLMs don’t run on predefined rules; they predict the next token based on massive training datasets. That magic comes with a hefty architectural tax: high inference costs, latency issues, and the constant threat of hallucinations."
+                },
+                {
+                    "Key": "article_1619514113512",
+                    "Order": 9,
+                    "Subtitle": "Foundation Model",
+                    "Title": "FM",
+                    "Color": "Green",
+                    "Content": "Think of a Foundation Model as the base engine you drop into a custom chassis. You adapt it, but inherit its underlying quirks. When these become Multimodal, they unlock killer product features but introduce massive evaluation complexity."
+                }
+            ],
+            "Color": "Green",
+            "Avatar": "/img/ai/creators.png",
+            "Subtitle": "Models That Generate Content",
+            "Title": "The Creators",
+            "Footer": "Architect Tip: These systems don’t just classify—they create",
+            "Layout": "layout-3321",
+            "SectionHeight": "190px"
+        },
+        {
+            "Key": "article_1619514445488",
+            "Order": 13,
+            "Sections": [
+                {
+                    "Key": "article_1619514536959",
+                    "Order": 14,
+                    "Color": "Orange",
+                    "Title": "AI Agents",
+                    "Content": "Agents don't just talk; they plan tasks, loop through logic, and execute workflows. The engineering nightmare here is reliability. Agents love to drift, get stuck, or take unintended paths.",
+                    "Subtitle": "Task Planner"
+                },
+                {
+                    "Key": "article_1619514599918",
+                    "Order": 15,
+                    "Color": "Orange",
+                    "Title": "Tool Use",
+                    "Subtitle": "System Actor",
+                    "Content": "Converts a LLM from a text generator into a system actor. The moment a model can call an API, or query a database, you have moved from content generation into operational risk."
+                },
+                {
+                    "Key": "section_1628851758876",
+                    "Order": 2,
+                    "Color": "Orange",
+                    "Title": "MCP",
+                    "Subtitle": "Model Context Protocol",
+                    "Content": "Standardization layer that makes tool integration manageable. Instead of every team inventing custom code for model-to-system communication, MCP gives a consistent contract for tools, context, and actions."
+                }
+            ],
+            "Layout": "layout-3221",
+            "Color": "Orange",
+            "Title": "The Doers",
+            "Subtitle": "AI Systems That Take Action",
+            "Footer": "Architect Tip: Shift from “AI that responds” to “AI that acts",
+            "Avatar": "/img/ai/doers.png",
+            "SectionHeight": "175px"
+        },
+        {
+            "Key": "article_1774642219181",
+            "Color": "Blue",
+            "Title": "The Mechanics",
+            "Subtitle": "How These Systems Actually Work",
+            "Avatar": "/img/ai/mechanics.png",
+            "Footer": "Architect Tip: Influence performance, cost, and feasibility",
+            "Order": 3,
+            "Sections": [
+                {
+                    "Key": "section_1774642336441",
+                    "Color": "Blue",
+                    "Subtitle": "Prompt Engineering",
+                    "Title": "Prompt",
+                    "Content": "Ignore the \"prompt whisperer\" hype. Prompt engineering is simply the discipline of giving a model clear instructions, the right context, the right constraints, and the expected output shape so it behaves consistently in a production workflow.",
+                    "Order": 0
+                },
+                {
+                    "Key": "section_1774642403065",
+                    "Color": "Blue",
+                    "Title": "Tokens",
+                    "Content": "Tokens are the unit of text a model consumes and generates, and they are effectively your compute currency. Every prompt, retrieved document, tool response, and model answer gets converted into tokens and billed, processed, and constrained that way.",
+                    "Subtitle": "The Fuel",
+                    "Order": 1
+                },
+                {
+                    "Key": "section_1774642540700",
+                    "Color": "Blue",
+                    "Title": "Context",
+                    "Subtitle": "The Memory",
+                    "Content": "The context window is the maximum amount of tokenized information a model can consider in a single call. Think of it as the working memory limit of the system, not a free license to stuff everything into the prompt.",
+                    "Order": 2
+                },
+                {
+                    "Key": "section_1774642650426",
+                    "Color": "Blue",
+                    "Title": "RAG",
+                    "Subtitle": "Retrieval-Augmented Generation",
+                    "Content": "RAG grounds model output in enterprise data. It provides factual references instead of relying purely on the model's internal memory.",
+                    "Order": 3
+                }
+            ],
+            "SectionHeight": "150px",
+            "Layout": "layout-2221"
+        },
+        {
+            "Key": "article_1774642746080",
+            "Color": "Red",
+            "Subtitle": "Risks That Cannot Be Ignored",
+            "Title": "The Danger Zone",
+            "Layout": "layout-2221",
+            "Avatar": "/img/ai/dangerZone.png",
+            "Order": 4,
+            "Sections": [
+                {
+                    "Key": "section_1774642815343",
+                    "Color": "Red",
+                    "Subtitle": "Hallucinations, Bias, and AI Slop",
+                    "Content": "LLMs will confidently lie to you. They inherit biases from training data, and the internet is currently drowning in \"AI slop\" (low-quality synthetic garbage) that threatens future training pipelines.",
+                    "Title": "Hallucinations",
+                    "Order": 0
+                },
+                {
+                    "Key": "section_1774642860828",
+                    "Color": "Red",
+                    "Subtitle": "The Snowball Effect",
+                    "Title": "Snowball",
+                    "Order": 1,
+                    "Content": "Automated pipelines amplify errors. A minor hallucination early on can cascade across an entire workflow. The same thing happens with token usage: one oversized prompt, or unconstrained model response inflates every subsequent call, and turns a small design mistake into a latency and cost avalanche."
+                }
+            ],
+            "SectionHeight": "180px",
+            "Footer": "Architect Tip: Technology meets governance and operational risk"
+        }
+    ],
+    "Subtitle": "A Practical Guide for Engineering Leaders",
+    "Title": "Understanding AI Terminology",
+    "Avatar": "/img/ai/main.png"
+}

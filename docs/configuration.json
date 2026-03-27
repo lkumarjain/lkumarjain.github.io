@@ -24,7 +24,13 @@
                     "To": "/infographics/backofenvelope",
                     "Label": "Back Of Envelope"
                 },
-                 {
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/infographics/understandingaiterminology",
+                    "Label": "Understanding AI Terminology"
+                },
+                {
                     "Variant": "link",
                     "Icon": "Default",
                     "To": "/infographics/cache",
