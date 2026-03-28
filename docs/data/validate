@@ -10,3 +10,32 @@
 
 -------
 
+
+Option 1: The "Direct & Technical" (Best for Slack/Teams)
+Headline: 🛠️ New Resource: The Engineering Leader’s AI Cheat Sheet
+Team,
+We’ve all seen the "AI hype" slides, but we needed something more grounded for our actual architecture reviews. I’ve put together a practical guide to AI Terminology & Architectural Trade-offs.
+This isn't a marketing overview. It covers:
+The Foundation: Why classic ML still beats LLMs for fraud and pricing.
+The Doers: The reliability engineering nightmare of AI Agents and MCP.
+The Mechanics: Why "Tokens" are our new compute currency.
+The Danger Zone: Managing "AI Slop" and the latency/cost snowball effect.
+Check it out here: [Link to Cheat Sheet/Infographic]
+Goal: Use this to ensure that when we say "we need AI," we’re actually talking about specific, actionable patterns (RAG, Agents, or FMs) and acknowledging the "architectural tax" that comes with them.
+Option 2: The "Short & Punchy" (Best for Internal Newsletters)
+Headline: Cutting through the AI Noise 🧠
+Stop me if you’ve heard this: "We’ll just plug it into an LLM." To help our engineering teams move from "experimentation" to "production-grade systems," I’ve created a Cheat Sheet for AI Architecture. Key Takeaways:
+Generative vs. Deterministic: Knowing when to use classic NLP vs. a Foundation Model.
+Operational Risk: The moment an LLM calls an API, you've moved from "content generation" to a "system actor."
+Cost Controls: Understanding the token economy and context window limits.
+View the full guide here: [Link]
+Option 3: The "Wait, Why?" (Best for starting a discussion)
+Headline: Is "AI" becoming a useless term? 🚩
+Lately, "AI" has become an umbrella term that’s too vague to be actionable in our technical specs. To fix that, I’ve mapped out The Mechanics of AI—a cheat sheet for engineering leaders to help us use the right tool for the right job.
+Why this matters:
+Predictability: Classic ML is often cheaper and more stable than DL.
+Context: Overstuffing a prompt isn't a strategy; it's a cost avalanche.
+Safety: Agents are powerful but prone to "logic drift."
+Let’s use these definitions in our upcoming Sprint Planning and Architecture Reviews to ensure we’re building for reliability, not just "magic."
+Full Infographic: [Link]
+
