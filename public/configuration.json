@@ -2,22 +2,50 @@
     "Home": "/data/infographics/kafkabasics.json",
     "Title": "Jain's Techno Driblet",
     "TagLine": "A Drop of Technology for Innovators",
-    "Navigation": [{
+    "Navigation": [
+        {
             "To": "/",
             "Label": "Home",
             "Variant": "link",
             "Icon": "Home"
         },
         {
-            "Label": "Infographics",
+            "Label": "AI",
             "Variant": "menu",
             "Icon": "Receipt",
-            "Items": [{
+            "Items": [
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/infographics/understandingaiterminology",
+                    "Label": "Understanding AI Terminology"
+                }
+            ]
+        },
+        {
+            "Label": "Infrastructure",
+            "Variant": "menu",
+            "Icon": "Receipt",
+            "Items": [
+                {
                     "Variant": "link",
                     "Icon": "Default",
                     "To": "/infographics/kafkabasics",
                     "Label": "Apache Kafka"
                 },
+                {
+                    "Variant": "link",
+                    "Icon": "Default",
+                    "To": "/infographics/elasticsearch",
+                    "Label": "Elastic Search"
+                }
+            ]
+        },
+        {
+            "Label": "System Design",
+            "Variant": "menu",
+            "Icon": "Receipt",
+            "Items": [
                 {
                     "Variant": "link",
                     "Icon": "Default",
@@ -29,16 +57,17 @@
                     "Icon": "Default",
                     "To": "/infographics/cache",
                     "Label": "Cache"
-                },
+                }
+            ]
+        },
+        {
+            "Label": "Programming",
+            "Variant": "menu",
+            "Icon": "Code",
+            "Items": [
                 {
                     "Variant": "link",
-                    "Icon": "Default",
-                    "To": "/infographics/elasticsearch",
-                    "Label": "Elastic Search"
-                },
-                {
-                    "Variant": "link",
-                    "Icon": "Default",
+                    "Icon": "Receipt",
                     "To": "/gallery/gomod",
                     "Label": "Go Module"
                 }
@@ -48,7 +77,8 @@
             "Label": "Components",
             "Variant": "menu",
             "Icon": "Settings",
-            "Items": [{
+            "Items": [
+                {
                     "Variant": "link",
                     "Icon": "Default",
                     "To": "/components/figure",

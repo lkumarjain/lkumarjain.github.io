@@ -10,7 +10,7 @@
             "Icon": "Home"
         },
         {
-            "Label": "Artificial Intelligence",
+            "Label": "AI",
             "Variant": "menu",
             "Icon": "Receipt",
             "Items": [
@@ -23,7 +23,7 @@
             ]
         },
         {
-            "Label": "Data Infrastructure & Search",
+            "Label": "Infrastructure",
             "Variant": "menu",
             "Icon": "Receipt",
             "Items": [
@@ -42,7 +42,7 @@
             ]
         },
         {
-            "Label": "System Design & Architecture",
+            "Label": "System Design",
             "Variant": "menu",
             "Icon": "Receipt",
             "Items": [
@@ -61,7 +61,7 @@
             ]
         },
         {
-            "Label": "Programming & Development",
+            "Label": "Programming",
             "Variant": "menu",
             "Icon": "Code",
             "Items": [
