@@ -1,0 +1,12 @@
+ NLP vs. LLMs
+​In your NLP section, you mention it is more "deterministic." While true for rule-based NLP, modern NLP is often probabilistic.
+​Refinement: "Many enterprise pipelines still run on classic NLP because it is more controllable and explainable than a massive LLM."
+​2. The "Foundation Model" (FM) Definition
+​The "custom chassis" analogy is great. To make it even more "Architect-friendly," you might want to mention Transfer Learning.
+​Refinement: Add: "FMs leverage transfer learning, allowing you to fine-tune a general-purpose giant for a specific, narrow domain."
+​3. RAG (Retrieval-Augmented Generation)
+​Your definition is good, but for engineering leaders, the "why" is often about freshness and cost.
+​Refinement: "RAG grounds model output in enterprise data, solving for data freshness and providing factual references without the massive cost of retraining the model."
+
+-------
+
